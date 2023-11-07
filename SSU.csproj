@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E9B323C9-C257-47EE-8112-17648120137E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SSU</RootNamespace>
+    <AssemblyName>SSU</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Archive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Archive.Designer.cs">
+      <DependentUpon>Archive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Cases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Cases.Designer.cs">
+      <DependentUpon>Cases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionString.cs" />
+    <Compile Include="Entities\Documents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Documents.Designer.cs">
+      <DependentUpon>Documents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relations\DocumentsSecSecret.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relations\DocumentsSecSecret.Designer.cs">
+      <DependentUpon>DocumentsSecSecret.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relations\EmployeeDocuments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relations\EmployeeDocuments.Designer.cs">
+      <DependentUpon>EmployeeDocuments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Employees.Designer.cs">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relations\EmployeeSecLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relations\EmployeeSecLevel.Designer.cs">
+      <DependentUpon>EmployeeSecLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Equipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Equipment.Designer.cs">
+      <DependentUpon>Equipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Title.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Title.Designer.cs">
+      <DependentUpon>Title.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Location.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Location.Designer.cs">
+      <DependentUpon>Location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Operations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Operations.Designer.cs">
+      <DependentUpon>Operations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relations\PositionsOfEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relations\PositionsOfEmployees.Designer.cs">
+      <DependentUpon>PositionsOfEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relations\SecLevelSecSecret.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relations\SecLevelSecSecret.Designer.cs">
+      <DependentUpon>SecLevelSecSecret.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityServiceOfUkraineDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SecurityServiceOfUkraineDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Entities\Archive.resx">
+      <DependentUpon>Archive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Cases.resx">
+      <DependentUpon>Cases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Documents.resx">
+      <DependentUpon>Documents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relations\DocumentsSecSecret.resx">
+      <DependentUpon>DocumentsSecSecret.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relations\EmployeeDocuments.resx">
+      <DependentUpon>EmployeeDocuments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Employees.resx">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relations\EmployeeSecLevel.resx">
+      <DependentUpon>EmployeeSecLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Equipment.resx">
+      <DependentUpon>Equipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Title.resx">
+      <DependentUpon>Title.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Location.resx">
+      <DependentUpon>Location.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Operations.resx">
+      <DependentUpon>Operations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relations\PositionsOfEmployees.resx">
+      <DependentUpon>PositionsOfEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Relations\SecLevelSecSecret.resx">
+      <DependentUpon>SecLevelSecSecret.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SecurityServiceOfUkraineDataSet.xsc">
+      <DependentUpon>SecurityServiceOfUkraineDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SecurityServiceOfUkraineDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SecurityServiceOfUkraineDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SecurityServiceOfUkraineDataSet.xss">
+      <DependentUpon>SecurityServiceOfUkraineDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\140936-1_large.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13be8631-5eb2-409e-a79e-96ff03f545b2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wh-sbu-black-940x1000.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
