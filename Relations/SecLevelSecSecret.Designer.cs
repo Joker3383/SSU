@@ -33,7 +33,23 @@
             System.Windows.Forms.Label securiryLevelLabel;
             System.Windows.Forms.Label securitySecretLabel;
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.secLevelSecSecretBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.securityServiceOfUkraineDataSet = new SSU.SecurityServiceOfUkraineDataSet();
+            this.securitySecretBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.securityLevelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.secLevelSecSecretIDTextBox = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -41,40 +57,51 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.securityServiceOfUkraineDataSet = new SSU.SecurityServiceOfUkraineDataSet();
-            this.secLevelSecSecretBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.secLevelSecSecretTableAdapter = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.SecLevelSecSecretTableAdapter();
             this.tableAdapterManager = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.TableAdapterManager();
-            this.secLevelSecSecretIDTextBox = new System.Windows.Forms.TextBox();
-            this.securityLevelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.securityLevelTableAdapter = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.SecurityLevelTableAdapter();
-            this.securitySecretBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.securitySecretTableAdapter = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.SecuritySecretTableAdapter();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             secLevelSecSecretIDLabel = new System.Windows.Forms.Label();
             securiryLevelLabel = new System.Windows.Forms.Label();
             securitySecretLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.secLevelSecSecretBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.securityServiceOfUkraineDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.securitySecretBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.securityLevelBindingSource)).BeginInit();
+            this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.securityServiceOfUkraineDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.secLevelSecSecretBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.securityLevelBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.securitySecretBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // secLevelSecSecretIDLabel
+            // 
+            secLevelSecSecretIDLabel.AutoSize = true;
+            secLevelSecSecretIDLabel.Location = new System.Drawing.Point(6, 34);
+            secLevelSecSecretIDLabel.Name = "secLevelSecSecretIDLabel";
+            secLevelSecSecretIDLabel.Size = new System.Drawing.Size(278, 29);
+            secLevelSecSecretIDLabel.TabIndex = 8;
+            secLevelSecSecretIDLabel.Text = "Sec Level Sec Secret ID:";
+            // 
+            // securiryLevelLabel
+            // 
+            securiryLevelLabel.AutoSize = true;
+            securiryLevelLabel.Location = new System.Drawing.Point(6, 75);
+            securiryLevelLabel.Name = "securiryLevelLabel";
+            securiryLevelLabel.Size = new System.Drawing.Size(171, 29);
+            securiryLevelLabel.TabIndex = 9;
+            securiryLevelLabel.Text = "Securiry Level:";
+            // 
+            // securitySecretLabel
+            // 
+            securitySecretLabel.AutoSize = true;
+            securitySecretLabel.Location = new System.Drawing.Point(6, 118);
+            securitySecretLabel.Name = "securitySecretLabel";
+            securitySecretLabel.Size = new System.Drawing.Size(181, 29);
+            securitySecretLabel.TabIndex = 9;
+            securitySecretLabel.Text = "Security Secret:";
             // 
             // groupBox1
             // 
@@ -93,6 +120,105 @@
             this.groupBox1.Text = "Add Correspondense between Security Level and Secutity Secret";
             this.groupBox1.Visible = false;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.secLevelSecSecretBindingSource, "SecuritySecretID", true));
+            this.comboBox2.DataSource = this.securitySecretBindingSource;
+            this.comboBox2.DisplayMember = "SecuritySecret";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(183, 118);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(194, 37);
+            this.comboBox2.TabIndex = 11;
+            this.comboBox2.ValueMember = "SecuritySecretID";
+            // 
+            // secLevelSecSecretBindingSource
+            // 
+            this.secLevelSecSecretBindingSource.DataMember = "SecLevelSecSecret";
+            this.secLevelSecSecretBindingSource.DataSource = this.securityServiceOfUkraineDataSet;
+            // 
+            // securityServiceOfUkraineDataSet
+            // 
+            this.securityServiceOfUkraineDataSet.DataSetName = "SecurityServiceOfUkraineDataSet";
+            this.securityServiceOfUkraineDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // securitySecretBindingSource
+            // 
+            this.securitySecretBindingSource.DataMember = "SecuritySecret";
+            this.securitySecretBindingSource.DataSource = this.securityServiceOfUkraineDataSet;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.secLevelSecSecretBindingSource, "SecurityLevelID", true));
+            this.comboBox1.DataSource = this.securityLevelBindingSource;
+            this.comboBox1.DisplayMember = "SecuriryLevel";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(183, 75);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(194, 37);
+            this.comboBox1.TabIndex = 10;
+            this.comboBox1.ValueMember = "SecurityLevelID";
+            // 
+            // securityLevelBindingSource
+            // 
+            this.securityLevelBindingSource.DataMember = "SecurityLevel";
+            this.securityLevelBindingSource.DataSource = this.securityServiceOfUkraineDataSet;
+            // 
+            // secLevelSecSecretIDTextBox
+            // 
+            this.secLevelSecSecretIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.secLevelSecSecretBindingSource, "SecLevelSecSecretID", true));
+            this.secLevelSecSecretIDTextBox.Location = new System.Drawing.Point(290, 31);
+            this.secLevelSecSecretIDTextBox.Name = "secLevelSecSecretIDTextBox";
+            this.secLevelSecSecretIDTextBox.Size = new System.Drawing.Size(100, 34);
+            this.secLevelSecSecretIDTextBox.TabIndex = 9;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button9);
+            this.panel2.Controls.Add(this.button7);
+            this.panel2.Controls.Add(this.button8);
+            this.panel2.Controls.Add(this.button6);
+            this.panel2.Location = new System.Drawing.Point(927, 31);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(56, 132);
+            this.panel2.TabIndex = 8;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(14, 3);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(25, 23);
+            this.button9.TabIndex = 3;
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(14, 90);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(25, 23);
+            this.button7.TabIndex = 1;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(14, 61);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(25, 23);
+            this.button8.TabIndex = 2;
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(14, 32);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(25, 23);
+            this.button6.TabIndex = 0;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
@@ -101,7 +227,42 @@
             this.groupBox2.Size = new System.Drawing.Size(989, 258);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "Security Level Security Secret";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dataGridView1.Location = new System.Drawing.Point(11, 33);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(972, 209);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Security Level";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Security Secret";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
             // 
             // panel3
             // 
@@ -173,63 +334,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Location = new System.Drawing.Point(927, 31);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(56, 132);
-            this.panel2.TabIndex = 8;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(14, 3);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(25, 23);
-            this.button9.TabIndex = 3;
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(14, 90);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(25, 23);
-            this.button7.TabIndex = 1;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(14, 61);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(25, 23);
-            this.button8.TabIndex = 2;
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(14, 32);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(25, 23);
-            this.button6.TabIndex = 0;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // securityServiceOfUkraineDataSet
-            // 
-            this.securityServiceOfUkraineDataSet.DataSetName = "SecurityServiceOfUkraineDataSet";
-            this.securityServiceOfUkraineDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // secLevelSecSecretBindingSource
-            // 
-            this.secLevelSecSecretBindingSource.DataMember = "SecLevelSecSecret";
-            this.secLevelSecSecretBindingSource.DataSource = this.securityServiceOfUkraineDataSet;
-            // 
             // secLevelSecSecretTableAdapter
             // 
             this.secLevelSecSecretTableAdapter.ClearBeforeFill = true;
@@ -254,117 +358,13 @@
             this.tableAdapterManager.SecuritySecretTableAdapter = this.securitySecretTableAdapter;
             this.tableAdapterManager.UpdateOrder = SSU.SecurityServiceOfUkraineDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // secLevelSecSecretIDLabel
-            // 
-            secLevelSecSecretIDLabel.AutoSize = true;
-            secLevelSecSecretIDLabel.Location = new System.Drawing.Point(6, 34);
-            secLevelSecSecretIDLabel.Name = "secLevelSecSecretIDLabel";
-            secLevelSecSecretIDLabel.Size = new System.Drawing.Size(278, 29);
-            secLevelSecSecretIDLabel.TabIndex = 8;
-            secLevelSecSecretIDLabel.Text = "Sec Level Sec Secret ID:";
-            // 
-            // secLevelSecSecretIDTextBox
-            // 
-            this.secLevelSecSecretIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.secLevelSecSecretBindingSource, "SecLevelSecSecretID", true));
-            this.secLevelSecSecretIDTextBox.Location = new System.Drawing.Point(290, 31);
-            this.secLevelSecSecretIDTextBox.Name = "secLevelSecSecretIDTextBox";
-            this.secLevelSecSecretIDTextBox.Size = new System.Drawing.Size(100, 34);
-            this.secLevelSecSecretIDTextBox.TabIndex = 9;
-            // 
-            // securityLevelBindingSource
-            // 
-            this.securityLevelBindingSource.DataMember = "SecurityLevel";
-            this.securityLevelBindingSource.DataSource = this.securityServiceOfUkraineDataSet;
-            // 
             // securityLevelTableAdapter
             // 
             this.securityLevelTableAdapter.ClearBeforeFill = true;
             // 
-            // securiryLevelLabel
-            // 
-            securiryLevelLabel.AutoSize = true;
-            securiryLevelLabel.Location = new System.Drawing.Point(6, 75);
-            securiryLevelLabel.Name = "securiryLevelLabel";
-            securiryLevelLabel.Size = new System.Drawing.Size(171, 29);
-            securiryLevelLabel.TabIndex = 9;
-            securiryLevelLabel.Text = "Securiry Level:";
-            // 
-            // securitySecretBindingSource
-            // 
-            this.securitySecretBindingSource.DataMember = "SecuritySecret";
-            this.securitySecretBindingSource.DataSource = this.securityServiceOfUkraineDataSet;
-            // 
             // securitySecretTableAdapter
             // 
             this.securitySecretTableAdapter.ClearBeforeFill = true;
-            // 
-            // securitySecretLabel
-            // 
-            securitySecretLabel.AutoSize = true;
-            securitySecretLabel.Location = new System.Drawing.Point(6, 118);
-            securitySecretLabel.Name = "securitySecretLabel";
-            securitySecretLabel.Size = new System.Drawing.Size(181, 29);
-            securitySecretLabel.TabIndex = 9;
-            securitySecretLabel.Text = "Security Secret:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.secLevelSecSecretBindingSource, "SecurityLevelID", true));
-            this.comboBox1.DataSource = this.securityLevelBindingSource;
-            this.comboBox1.DisplayMember = "SecuriryLevel";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(183, 75);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(194, 37);
-            this.comboBox1.TabIndex = 10;
-            this.comboBox1.ValueMember = "SecurityLevelID";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.secLevelSecSecretBindingSource, "SecuritySecretID", true));
-            this.comboBox2.DataSource = this.securitySecretBindingSource;
-            this.comboBox2.DisplayMember = "SecuritySecret";
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(183, 118);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(194, 37);
-            this.comboBox2.TabIndex = 11;
-            this.comboBox2.ValueMember = "SecuritySecretID";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(11, 33);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(972, 209);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Security Level";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Security Secret";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
             // 
             // SecLevelSecSecret
             // 
@@ -386,15 +386,15 @@
             this.Load += new System.EventHandler(this.SecLevelSecSecret_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.secLevelSecSecretBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.securityServiceOfUkraineDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.securitySecretBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.securityLevelBindingSource)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.securityServiceOfUkraineDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.secLevelSecSecretBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.securityLevelBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.securitySecretBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

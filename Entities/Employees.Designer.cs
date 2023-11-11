@@ -65,7 +65,6 @@
             this.collabPosadaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.collabPosadaTableAdapter = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.CollabPosadaTableAdapter();
             this.fKCollabPosPosad4E88ABD4BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             collaboratorIDLabel = new System.Windows.Forms.Label();
             collaboratorNameLabel = new System.Windows.Forms.Label();
             collaboratorSurnameLabel = new System.Windows.Forms.Label();
@@ -163,7 +162,7 @@
             // 
             this.panel4.Controls.Add(this.button3);
             this.panel4.Controls.Add(this.button1);
-            this.panel4.Location = new System.Drawing.Point(902, 665);
+            this.panel4.Location = new System.Drawing.Point(578, 665);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(304, 56);
             this.panel4.TabIndex = 10;
@@ -202,7 +201,7 @@
             this.groupBox1.Controls.Add(this.collaboratorIDTextBox);
             this.groupBox1.Location = new System.Drawing.Point(5, 397);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(627, 251);
+            this.groupBox1.Size = new System.Drawing.Size(863, 251);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Employee";
@@ -303,7 +302,7 @@
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Location = new System.Drawing.Point(12, 22);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1194, 369);
+            this.groupBox2.Size = new System.Drawing.Size(882, 369);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Employees";
@@ -323,7 +322,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1177, 330);
+            this.dataGridView1.Size = new System.Drawing.Size(859, 330);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -410,21 +409,11 @@
             this.fKCollabPosPosad4E88ABD4BindingSource.DataMember = "FK__CollabPos__Posad__4E88ABD4";
             this.fKCollabPosPosad4E88ABD4BindingSource.DataSource = this.posadaBindingSource;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Location = new System.Drawing.Point(638, 408);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(563, 251);
-            this.groupBox3.TabIndex = 13;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
-            // 
             // Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1213, 723);
-            this.Controls.Add(this.groupBox3);
+            this.ClientSize = new System.Drawing.Size(906, 723);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.groupBox1);
@@ -488,6 +477,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn collaboratorNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn collaboratorSurnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn collaboratorsDateOfBitthDataGridViewTextBoxColumn;
-        private System.Windows.Forms.GroupBox groupBox3;
     }
 }

@@ -39,6 +39,7 @@
             this.equipmentTableAdapter = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.EquipmentTableAdapter();
             this.tableAdapterManager = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.TableAdapterManager();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.quantityTextBox = new System.Windows.Forms.TextBox();
             this.descriptionEquipTextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
@@ -50,6 +51,11 @@
             this.nameEquipTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.equipmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameEquipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionEquipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusEquipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -57,14 +63,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.quantityTextBox = new System.Windows.Forms.TextBox();
-            this.equipmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameEquipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionEquipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusEquipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             equipmentIDLabel = new System.Windows.Forms.Label();
             nameEquipLabel = new System.Windows.Forms.Label();
             statusEquipLabel = new System.Windows.Forms.Label();
@@ -116,6 +115,15 @@
             descriptionEquipLabel.TabIndex = 7;
             descriptionEquipLabel.Text = "Description Equip:";
             // 
+            // quantityLabel
+            // 
+            quantityLabel.AutoSize = true;
+            quantityLabel.Location = new System.Drawing.Point(341, 33);
+            quantityLabel.Name = "quantityLabel";
+            quantityLabel.Size = new System.Drawing.Size(106, 29);
+            quantityLabel.TabIndex = 9;
+            quantityLabel.Text = "Quantity:";
+            // 
             // securityServiceOfUkraineDataSet
             // 
             this.securityServiceOfUkraineDataSet.DataSetName = "SecurityServiceOfUkraineDataSet";
@@ -165,11 +173,19 @@
             this.groupBox1.Controls.Add(nameEquipLabel);
             this.groupBox1.Location = new System.Drawing.Point(15, 270);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(564, 204);
+            this.groupBox1.Size = new System.Drawing.Size(875, 204);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add equip";
             this.groupBox1.Visible = false;
+            // 
+            // quantityTextBox
+            // 
+            this.quantityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.equipmentBindingSource, "Quantity", true));
+            this.quantityTextBox.Location = new System.Drawing.Point(444, 33);
+            this.quantityTextBox.Name = "quantityTextBox";
+            this.quantityTextBox.Size = new System.Drawing.Size(100, 34);
+            this.quantityTextBox.TabIndex = 10;
             // 
             // descriptionEquipTextBox
             // 
@@ -185,7 +201,7 @@
             this.panel2.Controls.Add(this.button7);
             this.panel2.Controls.Add(this.button8);
             this.panel2.Controls.Add(this.button6);
-            this.panel2.Location = new System.Drawing.Point(475, 73);
+            this.panel2.Location = new System.Drawing.Point(808, 24);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(52, 128);
             this.panel2.TabIndex = 4;
@@ -257,7 +273,7 @@
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Location = new System.Drawing.Point(18, 30);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1113, 243);
+            this.groupBox2.Size = new System.Drawing.Size(872, 243);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Equipment";
@@ -279,95 +295,8 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1101, 201);
+            this.dataGridView1.Size = new System.Drawing.Size(857, 201);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Location = new System.Drawing.Point(15, 481);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(435, 76);
-            this.panel3.TabIndex = 6;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(25, 16);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 39);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(295, 16);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(118, 39);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Delete";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(157, 16);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(116, 39);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Edit";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.button3);
-            this.panel4.Controls.Add(this.button1);
-            this.panel4.Location = new System.Drawing.Point(827, 481);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(304, 76);
-            this.panel4.TabIndex = 5;
-            this.panel4.Visible = false;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(26, 16);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 39);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(165, 16);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 39);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Decline";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // quantityLabel
-            // 
-            quantityLabel.AutoSize = true;
-            quantityLabel.Location = new System.Drawing.Point(341, 33);
-            quantityLabel.Name = "quantityLabel";
-            quantityLabel.Size = new System.Drawing.Size(106, 29);
-            quantityLabel.TabIndex = 9;
-            quantityLabel.Text = "Quantity:";
-            // 
-            // quantityTextBox
-            // 
-            this.quantityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.equipmentBindingSource, "Quantity", true));
-            this.quantityTextBox.Location = new System.Drawing.Point(444, 33);
-            this.quantityTextBox.Name = "quantityTextBox";
-            this.quantityTextBox.Size = new System.Drawing.Size(100, 34);
-            this.quantityTextBox.TabIndex = 10;
             // 
             // equipmentIDDataGridViewTextBoxColumn
             // 
@@ -414,21 +343,81 @@
             this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
             this.quantityDataGridViewTextBoxColumn.Width = 125;
             // 
-            // groupBox3
+            // panel3
             // 
-            this.groupBox3.Location = new System.Drawing.Point(585, 279);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(546, 196);
-            this.groupBox3.TabIndex = 7;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.button5);
+            this.panel3.Controls.Add(this.button4);
+            this.panel3.Location = new System.Drawing.Point(15, 481);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(435, 76);
+            this.panel3.TabIndex = 6;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(25, 16);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(108, 39);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Add";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(295, 16);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(118, 39);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Delete";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(157, 16);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(116, 39);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Edit";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.button3);
+            this.panel4.Controls.Add(this.button1);
+            this.panel4.Location = new System.Drawing.Point(577, 481);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(304, 76);
+            this.panel4.TabIndex = 5;
+            this.panel4.Visible = false;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(26, 16);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(102, 39);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Save";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(165, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(106, 39);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Decline";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Equipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1140, 566);
-            this.Controls.Add(this.groupBox3);
+            this.ClientSize = new System.Drawing.Size(899, 566);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.groupBox2);
@@ -486,6 +475,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn statusEquipDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.GroupBox groupBox3;
     }
 }

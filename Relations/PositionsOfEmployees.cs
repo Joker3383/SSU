@@ -119,7 +119,6 @@ namespace SSU
                 (
                 comboBox1.Text == null ||
                 comboBox2.Text == null ||
-                collabPosadaDateOfEndDateTimePicker == null ||
                 collabPosadaDateOfStartDateTimePicker == null
                 ))
             {
@@ -127,6 +126,13 @@ namespace SSU
                 return;
             }
             if (flag == 3) collabPosadaBindingSource.RemoveCurrent();
+
+            int collaboratorID = Convert.ToInt32(comboBox1.SelectedValue);
+            int newPosadaID = Convert.ToInt32(comboBox2.SelectedValue);
+
+            DateTime currentDate = DateTime.Now;
+
+            UpdatePreviousPositionEndDate(collaboratorID, currentDate);
 
             collabPosadaBindingNavigatorSaveItem_Click(sender, e);
             SelectData();
@@ -247,5 +253,21 @@ namespace SSU
         {
 
         }
+
+        private void UpdatePreviousPositionEndDate(int collaboratorID, DateTime currentDate)
+        {
+            string sqlUpdate = $"UPDATE CollabPosada SET CollabPosadaDateOfEnd = '{currentDate}' " +
+                               $"WHERE CollaboratorID = {collaboratorID} AND CollabPosadaDateOfEnd IS NULL";
+
+            using (SqlConnection connection = new SqlConnection(ConnectionString.Value))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(sqlUpdate, connection);
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+
+
     }
 }
