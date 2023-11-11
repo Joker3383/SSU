@@ -46,6 +46,7 @@
             this.securityLevelForSecuritySecretToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.securityLevelForEmpoyeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.securirySecretForDocumentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.successEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -112,7 +113,8 @@
             this.dataInfoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.positionOfEmployeesToolStripMenuItem,
             this.documentsToolStripMenuItem,
-            this.documentsOfEmployeesToolStripMenuItem});
+            this.documentsOfEmployeesToolStripMenuItem,
+            this.successEmployeesToolStripMenuItem});
             this.dataInfoToolStripMenuItem.Name = "dataInfoToolStripMenuItem";
             this.dataInfoToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.dataInfoToolStripMenuItem.Text = "Data Info";
@@ -151,21 +153,21 @@
             // secretCasesToolStripMenuItem
             // 
             this.secretCasesToolStripMenuItem.Name = "secretCasesToolStripMenuItem";
-            this.secretCasesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.secretCasesToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.secretCasesToolStripMenuItem.Text = "Secret Cases";
             this.secretCasesToolStripMenuItem.Click += new System.EventHandler(this.secretCasesToolStripMenuItem_Click);
             // 
             // operationsToolStripMenuItem
             // 
             this.operationsToolStripMenuItem.Name = "operationsToolStripMenuItem";
-            this.operationsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.operationsToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.operationsToolStripMenuItem.Text = "Operations";
             this.operationsToolStripMenuItem.Click += new System.EventHandler(this.operationsToolStripMenuItem_Click);
             // 
             // employeesToolStripMenuItem
             // 
             this.employeesToolStripMenuItem.Name = "employeesToolStripMenuItem";
-            this.employeesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.employeesToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.employeesToolStripMenuItem.Text = "Employees";
             this.employeesToolStripMenuItem.Click += new System.EventHandler(this.employeesToolStripMenuItem_Click);
             // 
@@ -199,6 +201,13 @@
             this.securirySecretForDocumentsToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
             this.securirySecretForDocumentsToolStripMenuItem.Text = "Securiry Secret for Documents";
             this.securirySecretForDocumentsToolStripMenuItem.Click += new System.EventHandler(this.securirySecretForDocumentsToolStripMenuItem_Click);
+            // 
+            // successEmployeesToolStripMenuItem
+            // 
+            this.successEmployeesToolStripMenuItem.Name = "successEmployeesToolStripMenuItem";
+            this.successEmployeesToolStripMenuItem.Size = new System.Drawing.Size(261, 26);
+            this.successEmployeesToolStripMenuItem.Text = "Success Employees";
+            this.successEmployeesToolStripMenuItem.Click += new System.EventHandler(this.successEmployeesToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -244,5 +253,6 @@
         private System.Windows.Forms.ToolStripMenuItem securityLevelForSecuritySecretToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem securityLevelForEmpoyeesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem securirySecretForDocumentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem successEmployeesToolStripMenuItem;
     }
 }

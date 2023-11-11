@@ -242,5 +242,10 @@ namespace SSU
         {
             posadaBindingSource.MoveLast();
         }
+
+        private void collabPosadaDateOfStartDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

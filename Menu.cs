@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SSU.Services;
+using System;
 using System.Windows.Forms;
 
 namespace SSU
@@ -18,7 +19,7 @@ namespace SSU
         private PositionsOfEmployees positionsOfEmployees;
         private SecLevelSecSecret secLevelSecSecret;
         private EmployeeSecLevel employeeSecLevel;
-
+        private EmployeeSuccess employeeSuccess;
         public Menu(int flag)
         {
             InitializeComponent();
@@ -109,6 +110,12 @@ namespace SSU
         {
             documentsSecSecret = new DocumentsSecSecret();
             documentsSecSecret.Show();
+        }
+
+        private void successEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            employeeSuccess = new EmployeeSuccess();
+            employeeSuccess.Show();
         }
     }
 }

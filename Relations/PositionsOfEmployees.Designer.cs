@@ -388,6 +388,7 @@
             this.collabPosadaDateOfStartDateTimePicker.Name = "collabPosadaDateOfStartDateTimePicker";
             this.collabPosadaDateOfStartDateTimePicker.Size = new System.Drawing.Size(267, 34);
             this.collabPosadaDateOfStartDateTimePicker.TabIndex = 3;
+            this.collabPosadaDateOfStartDateTimePicker.ValueChanged += new System.EventHandler(this.collabPosadaDateOfStartDateTimePicker_ValueChanged);
             // 
             // groupBox2
             // 
