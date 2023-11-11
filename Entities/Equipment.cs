@@ -78,6 +78,7 @@ namespace SSU
                         dataGridView1.Rows[i].Cells[1].Value = reader.GetValue(1);
                         dataGridView1.Rows[i].Cells[2].Value = reader.GetValue(2);
                         dataGridView1.Rows[i].Cells[3].Value = reader.GetValue(3);
+                        dataGridView1.Rows[i].Cells[4].Value = reader.GetValue(4);
                         i++;
                     }
                 }

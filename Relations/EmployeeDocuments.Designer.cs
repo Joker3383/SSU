@@ -253,6 +253,7 @@
             // 
             this.collaboratorsBindingSource1.DataMember = "Collaborators";
             this.collaboratorsBindingSource1.DataSource = this.securityServiceOfUkraineDataSet;
+            this.collaboratorsBindingSource1.CurrentChanged += new System.EventHandler(this.collaboratorsBindingSource1_CurrentChanged);
             // 
             // collabDocumDateOfStartDateTimePicker
             // 

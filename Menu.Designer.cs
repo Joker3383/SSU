@@ -31,21 +31,21 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.resourcesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.equipmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.locationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.archiveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.positionOfEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.documentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.documentsOfEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminAccessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.secretCasesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.operationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.employeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.systemAdminAccessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.securityLevelForSecuritySecretToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.securityLevelForEmpoyeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.securirySecretForDocumentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.secretCasesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.operationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.employeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.equipmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.locationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.archiveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.positionOfEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.documentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.documentsOfEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -86,6 +86,27 @@
             this.resourcesToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.resourcesToolStripMenuItem.Text = "Resources";
             // 
+            // equipmentToolStripMenuItem
+            // 
+            this.equipmentToolStripMenuItem.Name = "equipmentToolStripMenuItem";
+            this.equipmentToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.equipmentToolStripMenuItem.Text = "Equipment";
+            this.equipmentToolStripMenuItem.Click += new System.EventHandler(this.equipmentToolStripMenuItem_Click_1);
+            // 
+            // locationsToolStripMenuItem
+            // 
+            this.locationsToolStripMenuItem.Name = "locationsToolStripMenuItem";
+            this.locationsToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.locationsToolStripMenuItem.Text = "Locations";
+            this.locationsToolStripMenuItem.Click += new System.EventHandler(this.locationsToolStripMenuItem_Click);
+            // 
+            // archiveToolStripMenuItem
+            // 
+            this.archiveToolStripMenuItem.Name = "archiveToolStripMenuItem";
+            this.archiveToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.archiveToolStripMenuItem.Text = "Archive";
+            this.archiveToolStripMenuItem.Click += new System.EventHandler(this.archiveToolStripMenuItem_Click);
+            // 
             // dataInfoToolStripMenuItem
             // 
             this.dataInfoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -96,6 +117,27 @@
             this.dataInfoToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.dataInfoToolStripMenuItem.Text = "Data Info";
             // 
+            // positionOfEmployeesToolStripMenuItem
+            // 
+            this.positionOfEmployeesToolStripMenuItem.Name = "positionOfEmployeesToolStripMenuItem";
+            this.positionOfEmployeesToolStripMenuItem.Size = new System.Drawing.Size(261, 26);
+            this.positionOfEmployeesToolStripMenuItem.Text = "Position of Employees";
+            this.positionOfEmployeesToolStripMenuItem.Click += new System.EventHandler(this.positionOfEmployeesToolStripMenuItem_Click);
+            // 
+            // documentsToolStripMenuItem
+            // 
+            this.documentsToolStripMenuItem.Name = "documentsToolStripMenuItem";
+            this.documentsToolStripMenuItem.Size = new System.Drawing.Size(261, 26);
+            this.documentsToolStripMenuItem.Text = "Documents";
+            this.documentsToolStripMenuItem.Click += new System.EventHandler(this.documentsToolStripMenuItem_Click);
+            // 
+            // documentsOfEmployeesToolStripMenuItem
+            // 
+            this.documentsOfEmployeesToolStripMenuItem.Name = "documentsOfEmployeesToolStripMenuItem";
+            this.documentsOfEmployeesToolStripMenuItem.Size = new System.Drawing.Size(261, 26);
+            this.documentsOfEmployeesToolStripMenuItem.Text = "Documents of Employees";
+            this.documentsOfEmployeesToolStripMenuItem.Click += new System.EventHandler(this.documentsOfEmployeesToolStripMenuItem_Click);
+            // 
             // adminAccessToolStripMenuItem
             // 
             this.adminAccessToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -105,6 +147,27 @@
             this.adminAccessToolStripMenuItem.Name = "adminAccessToolStripMenuItem";
             this.adminAccessToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
             this.adminAccessToolStripMenuItem.Text = "Admin Access";
+            // 
+            // secretCasesToolStripMenuItem
+            // 
+            this.secretCasesToolStripMenuItem.Name = "secretCasesToolStripMenuItem";
+            this.secretCasesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.secretCasesToolStripMenuItem.Text = "Secret Cases";
+            this.secretCasesToolStripMenuItem.Click += new System.EventHandler(this.secretCasesToolStripMenuItem_Click);
+            // 
+            // operationsToolStripMenuItem
+            // 
+            this.operationsToolStripMenuItem.Name = "operationsToolStripMenuItem";
+            this.operationsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.operationsToolStripMenuItem.Text = "Operations";
+            this.operationsToolStripMenuItem.Click += new System.EventHandler(this.operationsToolStripMenuItem_Click);
+            // 
+            // employeesToolStripMenuItem
+            // 
+            this.employeesToolStripMenuItem.Name = "employeesToolStripMenuItem";
+            this.employeesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.employeesToolStripMenuItem.Text = "Employees";
+            this.employeesToolStripMenuItem.Click += new System.EventHandler(this.employeesToolStripMenuItem_Click);
             // 
             // systemAdminAccessToolStripMenuItem
             // 
@@ -136,69 +199,6 @@
             this.securirySecretForDocumentsToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
             this.securirySecretForDocumentsToolStripMenuItem.Text = "Securiry Secret for Documents";
             this.securirySecretForDocumentsToolStripMenuItem.Click += new System.EventHandler(this.securirySecretForDocumentsToolStripMenuItem_Click);
-            // 
-            // secretCasesToolStripMenuItem
-            // 
-            this.secretCasesToolStripMenuItem.Name = "secretCasesToolStripMenuItem";
-            this.secretCasesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.secretCasesToolStripMenuItem.Text = "Secret Cases";
-            this.secretCasesToolStripMenuItem.Click += new System.EventHandler(this.secretCasesToolStripMenuItem_Click);
-            // 
-            // operationsToolStripMenuItem
-            // 
-            this.operationsToolStripMenuItem.Name = "operationsToolStripMenuItem";
-            this.operationsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.operationsToolStripMenuItem.Text = "Operations";
-            this.operationsToolStripMenuItem.Click += new System.EventHandler(this.operationsToolStripMenuItem_Click);
-            // 
-            // employeesToolStripMenuItem
-            // 
-            this.employeesToolStripMenuItem.Name = "employeesToolStripMenuItem";
-            this.employeesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.employeesToolStripMenuItem.Text = "Employees";
-            this.employeesToolStripMenuItem.Click += new System.EventHandler(this.employeesToolStripMenuItem_Click);
-            // 
-            // equipmentToolStripMenuItem
-            // 
-            this.equipmentToolStripMenuItem.Name = "equipmentToolStripMenuItem";
-            this.equipmentToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.equipmentToolStripMenuItem.Text = "Equipment";
-            this.equipmentToolStripMenuItem.Click += new System.EventHandler(this.equipmentToolStripMenuItem_Click_1);
-            // 
-            // locationsToolStripMenuItem
-            // 
-            this.locationsToolStripMenuItem.Name = "locationsToolStripMenuItem";
-            this.locationsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.locationsToolStripMenuItem.Text = "Locations";
-            this.locationsToolStripMenuItem.Click += new System.EventHandler(this.locationsToolStripMenuItem_Click);
-            // 
-            // archiveToolStripMenuItem
-            // 
-            this.archiveToolStripMenuItem.Name = "archiveToolStripMenuItem";
-            this.archiveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.archiveToolStripMenuItem.Text = "Archive";
-            this.archiveToolStripMenuItem.Click += new System.EventHandler(this.archiveToolStripMenuItem_Click);
-            // 
-            // positionOfEmployeesToolStripMenuItem
-            // 
-            this.positionOfEmployeesToolStripMenuItem.Name = "positionOfEmployeesToolStripMenuItem";
-            this.positionOfEmployeesToolStripMenuItem.Size = new System.Drawing.Size(261, 26);
-            this.positionOfEmployeesToolStripMenuItem.Text = "Position of Employees";
-            this.positionOfEmployeesToolStripMenuItem.Click += new System.EventHandler(this.positionOfEmployeesToolStripMenuItem_Click);
-            // 
-            // documentsToolStripMenuItem
-            // 
-            this.documentsToolStripMenuItem.Name = "documentsToolStripMenuItem";
-            this.documentsToolStripMenuItem.Size = new System.Drawing.Size(261, 26);
-            this.documentsToolStripMenuItem.Text = "Documents";
-            this.documentsToolStripMenuItem.Click += new System.EventHandler(this.documentsToolStripMenuItem_Click);
-            // 
-            // documentsOfEmployeesToolStripMenuItem
-            // 
-            this.documentsOfEmployeesToolStripMenuItem.Name = "documentsOfEmployeesToolStripMenuItem";
-            this.documentsOfEmployeesToolStripMenuItem.Size = new System.Drawing.Size(261, 26);
-            this.documentsOfEmployeesToolStripMenuItem.Text = "Documents of Employees";
-            this.documentsOfEmployeesToolStripMenuItem.Click += new System.EventHandler(this.documentsOfEmployeesToolStripMenuItem_Click);
             // 
             // Menu
             // 

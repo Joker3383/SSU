@@ -54,6 +54,10 @@
             this.collaboratorIDTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.collaboratorIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.collaboratorNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.collaboratorSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.collaboratorsDateOfBitthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.collaboratorsTableAdapter = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.CollaboratorsTableAdapter();
             this.tableAdapterManager = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.TableAdapterManager();
             this.posadaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -61,10 +65,7 @@
             this.collabPosadaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.collabPosadaTableAdapter = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.CollabPosadaTableAdapter();
             this.fKCollabPosPosad4E88ABD4BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.collaboratorIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.collaboratorNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.collaboratorSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.collaboratorsDateOfBitthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             collaboratorIDLabel = new System.Windows.Forms.Label();
             collaboratorNameLabel = new System.Windows.Forms.Label();
             collaboratorSurnameLabel = new System.Windows.Forms.Label();
@@ -201,7 +202,7 @@
             this.groupBox1.Controls.Add(this.collaboratorIDTextBox);
             this.groupBox1.Location = new System.Drawing.Point(5, 397);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1195, 251);
+            this.groupBox1.Size = new System.Drawing.Size(627, 251);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Employee";
@@ -213,7 +214,7 @@
             this.panel2.Controls.Add(this.button7);
             this.panel2.Controls.Add(this.button8);
             this.panel2.Controls.Add(this.button6);
-            this.panel2.Location = new System.Drawing.Point(1122, 33);
+            this.panel2.Location = new System.Drawing.Point(546, 33);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(56, 132);
             this.panel2.TabIndex = 8;
@@ -326,6 +327,42 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // collaboratorIDDataGridViewTextBoxColumn
+            // 
+            this.collaboratorIDDataGridViewTextBoxColumn.DataPropertyName = "CollaboratorID";
+            this.collaboratorIDDataGridViewTextBoxColumn.HeaderText = "CollaboratorID";
+            this.collaboratorIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.collaboratorIDDataGridViewTextBoxColumn.Name = "collaboratorIDDataGridViewTextBoxColumn";
+            this.collaboratorIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.collaboratorIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // collaboratorNameDataGridViewTextBoxColumn
+            // 
+            this.collaboratorNameDataGridViewTextBoxColumn.DataPropertyName = "CollaboratorName";
+            this.collaboratorNameDataGridViewTextBoxColumn.HeaderText = "CollaboratorName";
+            this.collaboratorNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.collaboratorNameDataGridViewTextBoxColumn.Name = "collaboratorNameDataGridViewTextBoxColumn";
+            this.collaboratorNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.collaboratorNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // collaboratorSurnameDataGridViewTextBoxColumn
+            // 
+            this.collaboratorSurnameDataGridViewTextBoxColumn.DataPropertyName = "CollaboratorSurname";
+            this.collaboratorSurnameDataGridViewTextBoxColumn.HeaderText = "CollaboratorSurname";
+            this.collaboratorSurnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.collaboratorSurnameDataGridViewTextBoxColumn.Name = "collaboratorSurnameDataGridViewTextBoxColumn";
+            this.collaboratorSurnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.collaboratorSurnameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // collaboratorsDateOfBitthDataGridViewTextBoxColumn
+            // 
+            this.collaboratorsDateOfBitthDataGridViewTextBoxColumn.DataPropertyName = "CollaboratorsDateOfBitth";
+            this.collaboratorsDateOfBitthDataGridViewTextBoxColumn.HeaderText = "CollaboratorsDateOfBitth";
+            this.collaboratorsDateOfBitthDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.collaboratorsDateOfBitthDataGridViewTextBoxColumn.Name = "collaboratorsDateOfBitthDataGridViewTextBoxColumn";
+            this.collaboratorsDateOfBitthDataGridViewTextBoxColumn.ReadOnly = true;
+            this.collaboratorsDateOfBitthDataGridViewTextBoxColumn.Width = 125;
+            // 
             // collaboratorsTableAdapter
             // 
             this.collaboratorsTableAdapter.ClearBeforeFill = true;
@@ -373,47 +410,21 @@
             this.fKCollabPosPosad4E88ABD4BindingSource.DataMember = "FK__CollabPos__Posad__4E88ABD4";
             this.fKCollabPosPosad4E88ABD4BindingSource.DataSource = this.posadaBindingSource;
             // 
-            // collaboratorIDDataGridViewTextBoxColumn
+            // groupBox3
             // 
-            this.collaboratorIDDataGridViewTextBoxColumn.DataPropertyName = "CollaboratorID";
-            this.collaboratorIDDataGridViewTextBoxColumn.HeaderText = "CollaboratorID";
-            this.collaboratorIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.collaboratorIDDataGridViewTextBoxColumn.Name = "collaboratorIDDataGridViewTextBoxColumn";
-            this.collaboratorIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.collaboratorIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // collaboratorNameDataGridViewTextBoxColumn
-            // 
-            this.collaboratorNameDataGridViewTextBoxColumn.DataPropertyName = "CollaboratorName";
-            this.collaboratorNameDataGridViewTextBoxColumn.HeaderText = "CollaboratorName";
-            this.collaboratorNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.collaboratorNameDataGridViewTextBoxColumn.Name = "collaboratorNameDataGridViewTextBoxColumn";
-            this.collaboratorNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.collaboratorNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // collaboratorSurnameDataGridViewTextBoxColumn
-            // 
-            this.collaboratorSurnameDataGridViewTextBoxColumn.DataPropertyName = "CollaboratorSurname";
-            this.collaboratorSurnameDataGridViewTextBoxColumn.HeaderText = "CollaboratorSurname";
-            this.collaboratorSurnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.collaboratorSurnameDataGridViewTextBoxColumn.Name = "collaboratorSurnameDataGridViewTextBoxColumn";
-            this.collaboratorSurnameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.collaboratorSurnameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // collaboratorsDateOfBitthDataGridViewTextBoxColumn
-            // 
-            this.collaboratorsDateOfBitthDataGridViewTextBoxColumn.DataPropertyName = "CollaboratorsDateOfBitth";
-            this.collaboratorsDateOfBitthDataGridViewTextBoxColumn.HeaderText = "CollaboratorsDateOfBitth";
-            this.collaboratorsDateOfBitthDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.collaboratorsDateOfBitthDataGridViewTextBoxColumn.Name = "collaboratorsDateOfBitthDataGridViewTextBoxColumn";
-            this.collaboratorsDateOfBitthDataGridViewTextBoxColumn.ReadOnly = true;
-            this.collaboratorsDateOfBitthDataGridViewTextBoxColumn.Width = 125;
+            this.groupBox3.Location = new System.Drawing.Point(638, 408);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(563, 251);
+            this.groupBox3.TabIndex = 13;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "groupBox3";
             // 
             // Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1213, 723);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.groupBox1);
@@ -477,5 +488,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn collaboratorNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn collaboratorSurnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn collaboratorsDateOfBitthDataGridViewTextBoxColumn;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }

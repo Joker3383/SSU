@@ -3090,6 +3090,8 @@ namespace SSU {
             
             private global::System.Data.DataColumn columnStatusEquip;
             
+            private global::System.Data.DataColumn columnQuantity;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public EquipmentDataTable() {
@@ -3157,6 +3159,14 @@ namespace SSU {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn QuantityColumn {
+                get {
+                    return this.columnQuantity;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3192,13 +3202,14 @@ namespace SSU {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EquipmentRow AddEquipmentRow(string NameEquip, string DescriptionEquip, string StatusEquip) {
+            public EquipmentRow AddEquipmentRow(string NameEquip, string DescriptionEquip, string StatusEquip, int Quantity) {
                 EquipmentRow rowEquipmentRow = ((EquipmentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         NameEquip,
                         DescriptionEquip,
-                        StatusEquip};
+                        StatusEquip,
+                        Quantity};
                 rowEquipmentRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEquipmentRow);
                 return rowEquipmentRow;
@@ -3232,6 +3243,7 @@ namespace SSU {
                 this.columnNameEquip = base.Columns["NameEquip"];
                 this.columnDescriptionEquip = base.Columns["DescriptionEquip"];
                 this.columnStatusEquip = base.Columns["StatusEquip"];
+                this.columnQuantity = base.Columns["Quantity"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3245,6 +3257,8 @@ namespace SSU {
                 base.Columns.Add(this.columnDescriptionEquip);
                 this.columnStatusEquip = new global::System.Data.DataColumn("StatusEquip", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStatusEquip);
+                this.columnQuantity = new global::System.Data.DataColumn("Quantity", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQuantity);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnEquipmentID}, true));
                 this.columnEquipmentID.AutoIncrement = true;
@@ -6296,6 +6310,34 @@ namespace SSU {
                 set {
                     this[this.tableEquipment.StatusEquipColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Quantity {
+                get {
+                    try {
+                        return ((int)(this[this.tableEquipment.QuantityColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Quantity\' in table \'Equipment\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEquipment.QuantityColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsQuantityNull() {
+                return this.IsNull(this.tableEquipment.QuantityColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetQuantityNull() {
+                this[this.tableEquipment.QuantityColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9897,39 +9939,42 @@ SELECT DocumSecSecretID, DocumentID, SecuritySecretID, DocumSecSecretDateOfStart
             tableMapping.ColumnMappings.Add("NameEquip", "NameEquip");
             tableMapping.ColumnMappings.Add("DescriptionEquip", "DescriptionEquip");
             tableMapping.ColumnMappings.Add("StatusEquip", "StatusEquip");
+            tableMapping.ColumnMappings.Add("Quantity", "Quantity");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Equipment] WHERE (([EquipmentID] = @Original_EquipmentID) AND " +
-                "([NameEquip] = @Original_NameEquip) AND ([DescriptionEquip] = @Original_Descript" +
-                "ionEquip) AND ([StatusEquip] = @Original_StatusEquip))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Equipment] WHERE (([EquipmentID] = @Original_EquipmentID) AND ([NameEquip] = @Original_NameEquip) AND ([DescriptionEquip] = @Original_DescriptionEquip) AND ([StatusEquip] = @Original_StatusEquip) AND ((@IsNull_Quantity = 1 AND [Quantity] IS NULL) OR ([Quantity] = @Original_Quantity)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EquipmentID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EquipmentID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NameEquip", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NameEquip", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DescriptionEquip", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DescriptionEquip", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StatusEquip", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StatusEquip", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Equipment] ([NameEquip], [DescriptionEquip], [StatusEquip]) VA" +
-                "LUES (@NameEquip, @DescriptionEquip, @StatusEquip);\r\nSELECT EquipmentID, NameEqu" +
-                "ip, DescriptionEquip, StatusEquip FROM Equipment WHERE (EquipmentID = SCOPE_IDEN" +
-                "TITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Equipment] ([NameEquip], [DescriptionEquip], [StatusEquip], [Quantity]) VALUES (@NameEquip, @DescriptionEquip, @StatusEquip, @Quantity);
+SELECT EquipmentID, NameEquip, DescriptionEquip, StatusEquip, Quantity FROM Equipment WHERE (EquipmentID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NameEquip", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NameEquip", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DescriptionEquip", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DescriptionEquip", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StatusEquip", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StatusEquip", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Equipment] SET [NameEquip] = @NameEquip, [DescriptionEquip] = @DescriptionEquip, [StatusEquip] = @StatusEquip WHERE (([EquipmentID] = @Original_EquipmentID) AND ([NameEquip] = @Original_NameEquip) AND ([DescriptionEquip] = @Original_DescriptionEquip) AND ([StatusEquip] = @Original_StatusEquip));
-SELECT EquipmentID, NameEquip, DescriptionEquip, StatusEquip FROM Equipment WHERE (EquipmentID = @EquipmentID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Equipment] SET [NameEquip] = @NameEquip, [DescriptionEquip] = @DescriptionEquip, [StatusEquip] = @StatusEquip, [Quantity] = @Quantity WHERE (([EquipmentID] = @Original_EquipmentID) AND ([NameEquip] = @Original_NameEquip) AND ([DescriptionEquip] = @Original_DescriptionEquip) AND ([StatusEquip] = @Original_StatusEquip) AND ((@IsNull_Quantity = 1 AND [Quantity] IS NULL) OR ([Quantity] = @Original_Quantity)));
+SELECT EquipmentID, NameEquip, DescriptionEquip, StatusEquip, Quantity FROM Equipment WHERE (EquipmentID = @EquipmentID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NameEquip", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NameEquip", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DescriptionEquip", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DescriptionEquip", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StatusEquip", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StatusEquip", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EquipmentID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EquipmentID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NameEquip", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NameEquip", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DescriptionEquip", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DescriptionEquip", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StatusEquip", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StatusEquip", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EquipmentID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "EquipmentID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -9946,7 +9991,8 @@ SELECT EquipmentID, NameEquip, DescriptionEquip, StatusEquip FROM Equipment WHER
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT EquipmentID, NameEquip, DescriptionEquip, StatusEquip FROM dbo.Equipment";
+            this._commandCollection[0].CommandText = "SELECT EquipmentID, NameEquip, DescriptionEquip, StatusEquip, Quantity FROM dbo.E" +
+                "quipment";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -10007,7 +10053,7 @@ SELECT EquipmentID, NameEquip, DescriptionEquip, StatusEquip FROM Equipment WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_EquipmentID, string Original_NameEquip, string Original_DescriptionEquip, string Original_StatusEquip) {
+        public virtual int Delete(int Original_EquipmentID, string Original_NameEquip, string Original_DescriptionEquip, string Original_StatusEquip, global::System.Nullable<int> Original_Quantity) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_EquipmentID));
             if ((Original_NameEquip == null)) {
                 throw new global::System.ArgumentNullException("Original_NameEquip");
@@ -10026,6 +10072,14 @@ SELECT EquipmentID, NameEquip, DescriptionEquip, StatusEquip FROM Equipment WHER
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_StatusEquip));
+            }
+            if ((Original_Quantity.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_Quantity.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -10047,7 +10101,7 @@ SELECT EquipmentID, NameEquip, DescriptionEquip, StatusEquip FROM Equipment WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string NameEquip, string DescriptionEquip, string StatusEquip) {
+        public virtual int Insert(string NameEquip, string DescriptionEquip, string StatusEquip, global::System.Nullable<int> Quantity) {
             if ((NameEquip == null)) {
                 throw new global::System.ArgumentNullException("NameEquip");
             }
@@ -10065,6 +10119,12 @@ SELECT EquipmentID, NameEquip, DescriptionEquip, StatusEquip FROM Equipment WHER
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(StatusEquip));
+            }
+            if ((Quantity.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Quantity.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -10086,7 +10146,7 @@ SELECT EquipmentID, NameEquip, DescriptionEquip, StatusEquip FROM Equipment WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string NameEquip, string DescriptionEquip, string StatusEquip, int Original_EquipmentID, string Original_NameEquip, string Original_DescriptionEquip, string Original_StatusEquip, int EquipmentID) {
+        public virtual int Update(string NameEquip, string DescriptionEquip, string StatusEquip, global::System.Nullable<int> Quantity, int Original_EquipmentID, string Original_NameEquip, string Original_DescriptionEquip, string Original_StatusEquip, global::System.Nullable<int> Original_Quantity, int EquipmentID) {
             if ((NameEquip == null)) {
                 throw new global::System.ArgumentNullException("NameEquip");
             }
@@ -10105,26 +10165,40 @@ SELECT EquipmentID, NameEquip, DescriptionEquip, StatusEquip FROM Equipment WHER
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(StatusEquip));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_EquipmentID));
+            if ((Quantity.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Quantity.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_EquipmentID));
             if ((Original_NameEquip == null)) {
                 throw new global::System.ArgumentNullException("Original_NameEquip");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_NameEquip));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_NameEquip));
             }
             if ((Original_DescriptionEquip == null)) {
                 throw new global::System.ArgumentNullException("Original_DescriptionEquip");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_DescriptionEquip));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_DescriptionEquip));
             }
             if ((Original_StatusEquip == null)) {
                 throw new global::System.ArgumentNullException("Original_StatusEquip");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_StatusEquip));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_StatusEquip));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(EquipmentID));
+            if ((Original_Quantity.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Quantity.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(EquipmentID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10145,8 +10219,8 @@ SELECT EquipmentID, NameEquip, DescriptionEquip, StatusEquip FROM Equipment WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string NameEquip, string DescriptionEquip, string StatusEquip, int Original_EquipmentID, string Original_NameEquip, string Original_DescriptionEquip, string Original_StatusEquip) {
-            return this.Update(NameEquip, DescriptionEquip, StatusEquip, Original_EquipmentID, Original_NameEquip, Original_DescriptionEquip, Original_StatusEquip, Original_EquipmentID);
+        public virtual int Update(string NameEquip, string DescriptionEquip, string StatusEquip, global::System.Nullable<int> Quantity, int Original_EquipmentID, string Original_NameEquip, string Original_DescriptionEquip, string Original_StatusEquip, global::System.Nullable<int> Original_Quantity) {
+            return this.Update(NameEquip, DescriptionEquip, StatusEquip, Quantity, Original_EquipmentID, Original_NameEquip, Original_DescriptionEquip, Original_StatusEquip, Original_Quantity, Original_EquipmentID);
         }
     }
     

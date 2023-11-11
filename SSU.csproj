@@ -33,7 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -95,8 +97,16 @@
     <Compile Include="Entities\Equipment.Designer.cs">
       <DependentUpon>Equipment.cs</DependentUpon>
     </Compile>
-    <Compile Include="SecurityServiceOfUkraineDataSet.cs">
+    <Compile Include="SecurityServiceOfUkraineDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>SecurityServiceOfUkraineDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Services\EmployeeSuccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\EmployeeSuccess.Designer.cs">
+      <DependentUpon>EmployeeSuccess.cs</DependentUpon>
     </Compile>
     <Compile Include="Title.cs">
       <SubType>Form</SubType>
@@ -136,11 +146,6 @@
     <Compile Include="Relations\SecLevelSecSecret.Designer.cs">
       <DependentUpon>SecLevelSecSecret.cs</DependentUpon>
     </Compile>
-    <Compile Include="SecurityServiceOfUkraineDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SecurityServiceOfUkraineDataSet.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Entities\Archive.resx">
       <DependentUpon>Archive.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Entities\Equipment.resx">
       <DependentUpon>Equipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\EmployeeSuccess.resx">
+      <DependentUpon>EmployeeSuccess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Title.resx">
       <DependentUpon>Title.cs</DependentUpon>
@@ -229,5 +237,6 @@
   <ItemGroup>
     <None Include="Resources\wh-sbu-black-940x1000.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

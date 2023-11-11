@@ -165,5 +165,10 @@ namespace SSU
         {
 
         }
+
+        private void collaboratorsBindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
