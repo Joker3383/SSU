@@ -49,6 +49,10 @@
             this.nameEquipTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.equipmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameEquipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionEquipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusEquipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -56,10 +60,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.equipmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameEquipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionEquipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusEquipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             equipmentIDLabel = new System.Windows.Forms.Label();
             nameEquipLabel = new System.Windows.Forms.Label();
             statusEquipLabel = new System.Windows.Forms.Label();
@@ -77,7 +77,7 @@
             // equipmentIDLabel
             // 
             equipmentIDLabel.AutoSize = true;
-            equipmentIDLabel.Location = new System.Drawing.Point(29, 30);
+            equipmentIDLabel.Location = new System.Drawing.Point(18, 36);
             equipmentIDLabel.Name = "equipmentIDLabel";
             equipmentIDLabel.Size = new System.Drawing.Size(164, 29);
             equipmentIDLabel.TabIndex = 4;
@@ -86,7 +86,7 @@
             // nameEquipLabel
             // 
             nameEquipLabel.AutoSize = true;
-            nameEquipLabel.Location = new System.Drawing.Point(29, 105);
+            nameEquipLabel.Location = new System.Drawing.Point(20, 88);
             nameEquipLabel.Name = "nameEquipLabel";
             nameEquipLabel.Size = new System.Drawing.Size(153, 29);
             nameEquipLabel.TabIndex = 5;
@@ -230,7 +230,7 @@
             // equipmentIDTextBox
             // 
             this.equipmentIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.equipmentBindingSource, "EquipmentID", true));
-            this.equipmentIDTextBox.Location = new System.Drawing.Point(199, 28);
+            this.equipmentIDTextBox.Location = new System.Drawing.Point(188, 33);
             this.equipmentIDTextBox.Name = "equipmentIDTextBox";
             this.equipmentIDTextBox.ReadOnly = true;
             this.equipmentIDTextBox.Size = new System.Drawing.Size(131, 34);
@@ -239,7 +239,7 @@
             // nameEquipTextBox
             // 
             this.nameEquipTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.equipmentBindingSource, "NameEquip", true));
-            this.nameEquipTextBox.Location = new System.Drawing.Point(199, 105);
+            this.nameEquipTextBox.Location = new System.Drawing.Point(188, 88);
             this.nameEquipTextBox.Name = "nameEquipTextBox";
             this.nameEquipTextBox.Size = new System.Drawing.Size(142, 34);
             this.nameEquipTextBox.TabIndex = 6;
@@ -272,6 +272,42 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1101, 201);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // equipmentIDDataGridViewTextBoxColumn
+            // 
+            this.equipmentIDDataGridViewTextBoxColumn.DataPropertyName = "EquipmentID";
+            this.equipmentIDDataGridViewTextBoxColumn.HeaderText = "EquipmentID";
+            this.equipmentIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.equipmentIDDataGridViewTextBoxColumn.Name = "equipmentIDDataGridViewTextBoxColumn";
+            this.equipmentIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.equipmentIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nameEquipDataGridViewTextBoxColumn
+            // 
+            this.nameEquipDataGridViewTextBoxColumn.DataPropertyName = "NameEquip";
+            this.nameEquipDataGridViewTextBoxColumn.HeaderText = "NameEquip";
+            this.nameEquipDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameEquipDataGridViewTextBoxColumn.Name = "nameEquipDataGridViewTextBoxColumn";
+            this.nameEquipDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameEquipDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // descriptionEquipDataGridViewTextBoxColumn
+            // 
+            this.descriptionEquipDataGridViewTextBoxColumn.DataPropertyName = "DescriptionEquip";
+            this.descriptionEquipDataGridViewTextBoxColumn.HeaderText = "DescriptionEquip";
+            this.descriptionEquipDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descriptionEquipDataGridViewTextBoxColumn.Name = "descriptionEquipDataGridViewTextBoxColumn";
+            this.descriptionEquipDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descriptionEquipDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // statusEquipDataGridViewTextBoxColumn
+            // 
+            this.statusEquipDataGridViewTextBoxColumn.DataPropertyName = "StatusEquip";
+            this.statusEquipDataGridViewTextBoxColumn.HeaderText = "StatusEquip";
+            this.statusEquipDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.statusEquipDataGridViewTextBoxColumn.Name = "statusEquipDataGridViewTextBoxColumn";
+            this.statusEquipDataGridViewTextBoxColumn.ReadOnly = true;
+            this.statusEquipDataGridViewTextBoxColumn.Width = 125;
             // 
             // panel3
             // 
@@ -342,42 +378,6 @@
             this.button1.Text = "Decline";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // equipmentIDDataGridViewTextBoxColumn
-            // 
-            this.equipmentIDDataGridViewTextBoxColumn.DataPropertyName = "EquipmentID";
-            this.equipmentIDDataGridViewTextBoxColumn.HeaderText = "EquipmentID";
-            this.equipmentIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.equipmentIDDataGridViewTextBoxColumn.Name = "equipmentIDDataGridViewTextBoxColumn";
-            this.equipmentIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.equipmentIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nameEquipDataGridViewTextBoxColumn
-            // 
-            this.nameEquipDataGridViewTextBoxColumn.DataPropertyName = "NameEquip";
-            this.nameEquipDataGridViewTextBoxColumn.HeaderText = "NameEquip";
-            this.nameEquipDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameEquipDataGridViewTextBoxColumn.Name = "nameEquipDataGridViewTextBoxColumn";
-            this.nameEquipDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameEquipDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // descriptionEquipDataGridViewTextBoxColumn
-            // 
-            this.descriptionEquipDataGridViewTextBoxColumn.DataPropertyName = "DescriptionEquip";
-            this.descriptionEquipDataGridViewTextBoxColumn.HeaderText = "DescriptionEquip";
-            this.descriptionEquipDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descriptionEquipDataGridViewTextBoxColumn.Name = "descriptionEquipDataGridViewTextBoxColumn";
-            this.descriptionEquipDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descriptionEquipDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // statusEquipDataGridViewTextBoxColumn
-            // 
-            this.statusEquipDataGridViewTextBoxColumn.DataPropertyName = "StatusEquip";
-            this.statusEquipDataGridViewTextBoxColumn.HeaderText = "StatusEquip";
-            this.statusEquipDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.statusEquipDataGridViewTextBoxColumn.Name = "statusEquipDataGridViewTextBoxColumn";
-            this.statusEquipDataGridViewTextBoxColumn.ReadOnly = true;
-            this.statusEquipDataGridViewTextBoxColumn.Width = 125;
             // 
             // Equipment
             // 

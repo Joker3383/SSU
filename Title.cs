@@ -1,26 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SSU
 {
     public partial class Title : Form
     {
+
+        Menu form2;
+        int flag = 0;
+
         public Title()
         {
             InitializeComponent();
         }
-        Menu form2;
-        int flag = 0;
+
         private readonly string[] _passwords = new string[]
         {
-            "superAdmin","admin1234","qwerty1234"
+            "superAdmin","admin1234","qwerty1234","root123"
         };
 
         private void Form1_Load(object sender, EventArgs e)
@@ -39,7 +36,7 @@ namespace SSU
             if (_passwords.Contains(str))
             {
                 string _root = "root";
-                string _admin = "admin";    
+                string _admin = "admin";
                 textBox1.Clear();
                 flag = 1;
                 int lenth = str.Length;

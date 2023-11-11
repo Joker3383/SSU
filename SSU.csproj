@@ -95,6 +95,9 @@
     <Compile Include="Entities\Equipment.Designer.cs">
       <DependentUpon>Equipment.cs</DependentUpon>
     </Compile>
+    <Compile Include="SecurityServiceOfUkraineDataSet.cs">
+      <DependentUpon>SecurityServiceOfUkraineDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Title.cs">
       <SubType>Form</SubType>
     </Compile>
