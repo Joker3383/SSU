@@ -51,11 +51,6 @@
             this.nameEquipTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.equipmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameEquipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionEquipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusEquipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -64,6 +59,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             equipmentIDLabel = new System.Windows.Forms.Label();
             nameEquipLabel = new System.Windows.Forms.Label();
             statusEquipLabel = new System.Windows.Forms.Label();
@@ -281,15 +281,13 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.equipmentIDDataGridViewTextBoxColumn,
-            this.nameEquipDataGridViewTextBoxColumn,
-            this.descriptionEquipDataGridViewTextBoxColumn,
-            this.statusEquipDataGridViewTextBoxColumn,
-            this.quantityDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.equipmentBindingSource;
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
             this.dataGridView1.Location = new System.Drawing.Point(6, 33);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -297,51 +295,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(857, 201);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // equipmentIDDataGridViewTextBoxColumn
-            // 
-            this.equipmentIDDataGridViewTextBoxColumn.DataPropertyName = "EquipmentID";
-            this.equipmentIDDataGridViewTextBoxColumn.HeaderText = "EquipmentID";
-            this.equipmentIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.equipmentIDDataGridViewTextBoxColumn.Name = "equipmentIDDataGridViewTextBoxColumn";
-            this.equipmentIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.equipmentIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nameEquipDataGridViewTextBoxColumn
-            // 
-            this.nameEquipDataGridViewTextBoxColumn.DataPropertyName = "NameEquip";
-            this.nameEquipDataGridViewTextBoxColumn.HeaderText = "NameEquip";
-            this.nameEquipDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameEquipDataGridViewTextBoxColumn.Name = "nameEquipDataGridViewTextBoxColumn";
-            this.nameEquipDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameEquipDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // descriptionEquipDataGridViewTextBoxColumn
-            // 
-            this.descriptionEquipDataGridViewTextBoxColumn.DataPropertyName = "DescriptionEquip";
-            this.descriptionEquipDataGridViewTextBoxColumn.HeaderText = "DescriptionEquip";
-            this.descriptionEquipDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descriptionEquipDataGridViewTextBoxColumn.Name = "descriptionEquipDataGridViewTextBoxColumn";
-            this.descriptionEquipDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descriptionEquipDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // statusEquipDataGridViewTextBoxColumn
-            // 
-            this.statusEquipDataGridViewTextBoxColumn.DataPropertyName = "StatusEquip";
-            this.statusEquipDataGridViewTextBoxColumn.HeaderText = "StatusEquip";
-            this.statusEquipDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.statusEquipDataGridViewTextBoxColumn.Name = "statusEquipDataGridViewTextBoxColumn";
-            this.statusEquipDataGridViewTextBoxColumn.ReadOnly = true;
-            this.statusEquipDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
-            this.quantityDataGridViewTextBoxColumn.Width = 125;
             // 
             // panel3
             // 
@@ -413,6 +366,48 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // Column1
+            // 
+            this.Column1.Frozen = true;
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.Frozen = true;
+            this.Column2.HeaderText = "Name";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Description";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 200;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Status";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Quantity";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 125;
+            // 
             // Equipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -469,11 +464,11 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox quantityTextBox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn equipmentIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameEquipDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionEquipDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusEquipDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

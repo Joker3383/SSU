@@ -22,6 +22,7 @@ namespace SSU
 
         private void Archive_Load(object sender, EventArgs e)
         {
+            SelectArchive();
             // TODO: This line of code loads data into the 'securityServiceOfUkraineDataSet.SecretCase' table. You can move, or remove it, as needed.
             this.secretCaseTableAdapter.Fill(this.securityServiceOfUkraineDataSet.SecretCase);
             // TODO: This line of code loads data into the 'securityServiceOfUkraineDataSet.Archive' table. You can move, or remove it, as needed.

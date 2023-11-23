@@ -22,6 +22,7 @@ namespace SSU
 
         private void Operations_Load(object sender, EventArgs e)
         {
+            Selectoperations();
             // TODO: This line of code loads data into the 'securityServiceOfUkraineDataSet.Collaborators' table. You can move, or remove it, as needed.
             this.collaboratorsTableAdapter.Fill(this.securityServiceOfUkraineDataSet.Collaborators);
             // TODO: This line of code loads data into the 'securityServiceOfUkraineDataSet.SecretCase' table. You can move, or remove it, as needed.
@@ -34,6 +35,19 @@ namespace SSU
             this.operationTableAdapter.Fill(this.securityServiceOfUkraineDataSet.Operation);
 
         }
+
+        private void SubEquip(int EquipID)
+        {
+            var sqlExpression = $"update Equipment set Quantity = Quantity -1 where EquipmentID = {EquipID}";
+            using (SqlConnection connection = new SqlConnection(ConnectionString.Value))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(sqlExpression, connection);
+                command.ExecuteNonQuery();
+                connection.Close();
+
+            }
+        }
         //add
         private void button2_Click(object sender, EventArgs e)
         {
@@ -41,6 +55,7 @@ namespace SSU
             panel3.Visible = false;
             panel4.Visible = true;
             groupBox1.Visible = true;
+            SubEquip(Convert.ToInt32(comboBox4.SelectedValue));
             operationBindingSource.AddNew();
         }
         //edit

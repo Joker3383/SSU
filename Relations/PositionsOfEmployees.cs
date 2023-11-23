@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SSU
@@ -16,11 +9,12 @@ namespace SSU
         int flag = 0;
         int flagP = 0;
 
+        Employees employees;
+
         public PositionsOfEmployees()
         {
             InitializeComponent();
         }
-
         private void collabPosadaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
@@ -28,7 +22,6 @@ namespace SSU
             this.tableAdapterManager.UpdateAll(this.securityServiceOfUkraineDataSet);
 
         }
-
         private void posadaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
@@ -53,28 +46,40 @@ namespace SSU
         private void button2_Click(object sender, EventArgs e)
         {
             flag = 1;
+
+            collabPosadaDateOfStartDateTimePicker.Enabled = true;
             panel3.Visible = false;
             panel4.Visible = true;
             groupBox1.Visible = true;
+            comboBox1.Enabled = true;
+            comboBox2.Enabled = true;
             collabPosadaBindingSource.AddNew();
         }
         //edit
         private void button4_Click(object sender, EventArgs e)
         {
             flag = 2;
+            collabPosadaDateOfStartDateTimePicker.Enabled = false;
             panel3.Visible = false;
             panel4.Visible = true;
             groupBox1.Visible = true;
-            groupBox1.Text = "Change Position of Collaborators!";
+            comboBox1.Enabled = false;
+            comboBox2.Enabled = true;
+            collabPosadaDateOfStartDateTimePicker.Value = DateTime.Now;
+            groupBox1.Text = "Change Position of Employee!";
         }
         //delete
         private void button5_Click(object sender, EventArgs e)
         {
             flag = 3;
+            collabPosadaDateOfStartDateTimePicker.Enabled = false;
             panel3.Visible = false;
             panel4.Visible = true;
             groupBox1.Visible = true;
-            groupBox1.Text = "Delete Position of Collaborators!";
+            comboBox1.Enabled = false;
+            comboBox2.Enabled = false;
+            groupBox1.Text = "Fire Employee!";
+            collabPosadaDateOfEndDateTimePicker.Value = DateTime.Now;
         }
         //selectData
         public void SelectData()
@@ -118,21 +123,13 @@ namespace SSU
                 &&
                 (
                 comboBox1.Text == null ||
-                comboBox2.Text == null ||
-                collabPosadaDateOfStartDateTimePicker == null
-                ))
+                comboBox2.Text == null
+                )
+               )
             {
                 MessageBox.Show("Not all required fields are set");
                 return;
             }
-            if (flag == 3) collabPosadaBindingSource.RemoveCurrent();
-
-            int collaboratorID = Convert.ToInt32(comboBox1.SelectedValue);
-            int newPosadaID = Convert.ToInt32(comboBox2.SelectedValue);
-
-            DateTime currentDate = DateTime.Now;
-
-            UpdatePreviousPositionEndDate(collaboratorID, currentDate);
 
             collabPosadaBindingNavigatorSaveItem_Click(sender, e);
             SelectData();
@@ -200,13 +197,14 @@ namespace SSU
             panel6.Visible = true;
             groupBox3.Visible = true;
             groupBox3.Text = "Delete Position";
+
         }
         //P Save
         private void button17_Click(object sender, EventArgs e)
         {
             if (
                 (flag == 2 || flag == 1)
-                && 
+                &&
                 (posadaTextBox.Text == "")
                 )
             {
@@ -223,7 +221,7 @@ namespace SSU
         //P Decline
         private void button18_Click(object sender, EventArgs e)
         {
-            if(flagP == 1 || flagP == 2) posadaBindingSource.CancelEdit();
+            if (flagP == 1 || flagP == 2) posadaBindingSource.CancelEdit();
             panel5.Visible = true;
             panel6.Visible = false;
             groupBox3.Visible = false;
@@ -251,23 +249,23 @@ namespace SSU
 
         private void collabPosadaDateOfStartDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void UpdatePreviousPositionEndDate(int collaboratorID, DateTime currentDate)
+        private void button20_Click(object sender, EventArgs e)
         {
-            string sqlUpdate = $"UPDATE CollabPosada SET CollabPosadaDateOfEnd = '{currentDate}' " +
-                               $"WHERE CollaboratorID = {collaboratorID} AND CollabPosadaDateOfEnd IS NULL";
-
-            using (SqlConnection connection = new SqlConnection(ConnectionString.Value))
-            {
-                connection.Open();
-                SqlCommand command = new SqlCommand(sqlUpdate, connection);
-                command.ExecuteNonQuery();
-                connection.Close();
-            }
+            employees = new Employees();
+            employees.Show();
         }
 
+        private void collabPosadaDateOfEndLabel_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

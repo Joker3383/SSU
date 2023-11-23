@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label posadaLabel;
             System.Windows.Forms.Label collabPosadaDateOfStartLabel;
-            System.Windows.Forms.Label collabPosadaDateOfEndLabel;
             System.Windows.Forms.Label collabPosadaIDLabel;
             System.Windows.Forms.Label posadaIDLabel;
             System.Windows.Forms.Label posadaLabel1;
             System.Windows.Forms.Label collaboratorSurnameLabel;
+            System.Windows.Forms.Label collabPosadaDateOfEndLabel;
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -44,6 +44,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button20 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.collabPosadaIDTextBox = new System.Windows.Forms.TextBox();
             this.collabPosadaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -87,11 +88,11 @@
             this.button18 = new System.Windows.Forms.Button();
             posadaLabel = new System.Windows.Forms.Label();
             collabPosadaDateOfStartLabel = new System.Windows.Forms.Label();
-            collabPosadaDateOfEndLabel = new System.Windows.Forms.Label();
             collabPosadaIDLabel = new System.Windows.Forms.Label();
             posadaIDLabel = new System.Windows.Forms.Label();
             posadaLabel1 = new System.Windows.Forms.Label();
             collaboratorSurnameLabel = new System.Windows.Forms.Label();
+            collabPosadaDateOfEndLabel = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -125,15 +126,6 @@
             collabPosadaDateOfStartLabel.Size = new System.Drawing.Size(319, 29);
             collabPosadaDateOfStartLabel.TabIndex = 2;
             collabPosadaDateOfStartLabel.Text = "Collab Posada Date Of Start:";
-            // 
-            // collabPosadaDateOfEndLabel
-            // 
-            collabPosadaDateOfEndLabel.AutoSize = true;
-            collabPosadaDateOfEndLabel.Location = new System.Drawing.Point(6, 221);
-            collabPosadaDateOfEndLabel.Name = "collabPosadaDateOfEndLabel";
-            collabPosadaDateOfEndLabel.Size = new System.Drawing.Size(313, 29);
-            collabPosadaDateOfEndLabel.TabIndex = 4;
-            collabPosadaDateOfEndLabel.Text = "Collab Posada Date Of End:";
             // 
             // collabPosadaIDLabel
             // 
@@ -171,6 +163,16 @@
             collaboratorSurnameLabel.TabIndex = 11;
             collaboratorSurnameLabel.Text = "Collaborator Surname:";
             // 
+            // collabPosadaDateOfEndLabel
+            // 
+            collabPosadaDateOfEndLabel.AutoSize = true;
+            collabPosadaDateOfEndLabel.Location = new System.Drawing.Point(6, 221);
+            collabPosadaDateOfEndLabel.Name = "collabPosadaDateOfEndLabel";
+            collabPosadaDateOfEndLabel.Size = new System.Drawing.Size(313, 29);
+            collabPosadaDateOfEndLabel.TabIndex = 4;
+            collabPosadaDateOfEndLabel.Text = "Collab Posada Date Of End:";
+            collabPosadaDateOfEndLabel.Click += new System.EventHandler(this.collabPosadaDateOfEndLabel_Click);
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.button2);
@@ -197,7 +199,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(118, 39);
             this.button5.TabIndex = 4;
-            this.button5.Text = "Delete";
+            this.button5.Text = "Fire";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -215,7 +217,7 @@
             // 
             this.panel4.Controls.Add(this.button3);
             this.panel4.Controls.Add(this.button1);
-            this.panel4.Location = new System.Drawing.Point(466, 546);
+            this.panel4.Location = new System.Drawing.Point(462, 546);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(304, 56);
             this.panel4.TabIndex = 10;
@@ -243,6 +245,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button20);
             this.groupBox1.Controls.Add(collaboratorSurnameLabel);
             this.groupBox1.Controls.Add(this.button19);
             this.groupBox1.Controls.Add(collabPosadaIDLabel);
@@ -257,19 +260,27 @@
             this.groupBox1.Controls.Add(posadaLabel);
             this.groupBox1.Location = new System.Drawing.Point(12, 242);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(612, 275);
+            this.groupBox1.Size = new System.Drawing.Size(754, 298);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Add collab = posada";
+            this.groupBox1.Text = "Define position to employee";
             this.groupBox1.Visible = false;
+            // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(443, 133);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(87, 36);
+            this.button20.TabIndex = 12;
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // button19
             // 
-            this.button19.Location = new System.Drawing.Point(434, 51);
+            this.button19.Location = new System.Drawing.Point(325, 89);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(75, 61);
+            this.button19.Size = new System.Drawing.Size(88, 36);
             this.button19.TabIndex = 11;
-            this.button19.Text = "P";
             this.button19.UseVisualStyleBackColor = true;
             this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
@@ -317,7 +328,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(267, 133);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(242, 37);
+            this.comboBox1.Size = new System.Drawing.Size(168, 37);
             this.comboBox1.TabIndex = 8;
             this.comboBox1.ValueMember = "CollaboratorID";
             // 
@@ -332,7 +343,7 @@
             this.panel2.Controls.Add(this.button7);
             this.panel2.Controls.Add(this.button8);
             this.panel2.Controls.Add(this.button6);
-            this.panel2.Location = new System.Drawing.Point(536, 33);
+            this.panel2.Location = new System.Drawing.Point(677, 22);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(56, 132);
             this.panel2.TabIndex = 7;
@@ -376,17 +387,19 @@
             // collabPosadaDateOfEndDateTimePicker
             // 
             this.collabPosadaDateOfEndDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.collabPosadaBindingSource, "CollabPosadaDateOfEnd", true));
+            this.collabPosadaDateOfEndDateTimePicker.Enabled = false;
             this.collabPosadaDateOfEndDateTimePicker.Location = new System.Drawing.Point(325, 221);
             this.collabPosadaDateOfEndDateTimePicker.Name = "collabPosadaDateOfEndDateTimePicker";
-            this.collabPosadaDateOfEndDateTimePicker.Size = new System.Drawing.Size(267, 34);
+            this.collabPosadaDateOfEndDateTimePicker.Size = new System.Drawing.Size(316, 34);
             this.collabPosadaDateOfEndDateTimePicker.TabIndex = 5;
             // 
             // collabPosadaDateOfStartDateTimePicker
             // 
             this.collabPosadaDateOfStartDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.collabPosadaBindingSource, "CollabPosadaDateOfStart", true));
+            this.collabPosadaDateOfStartDateTimePicker.Enabled = false;
             this.collabPosadaDateOfStartDateTimePicker.Location = new System.Drawing.Point(325, 181);
             this.collabPosadaDateOfStartDateTimePicker.Name = "collabPosadaDateOfStartDateTimePicker";
-            this.collabPosadaDateOfStartDateTimePicker.Size = new System.Drawing.Size(267, 34);
+            this.collabPosadaDateOfStartDateTimePicker.Size = new System.Drawing.Size(316, 34);
             this.collabPosadaDateOfStartDateTimePicker.TabIndex = 3;
             this.collabPosadaDateOfStartDateTimePicker.ValueChanged += new System.EventHandler(this.collabPosadaDateOfStartDateTimePicker_ValueChanged);
             // 
@@ -395,7 +408,7 @@
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(758, 232);
+            this.groupBox2.Size = new System.Drawing.Size(1125, 232);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Position of Employees";
@@ -413,8 +426,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(727, 191);
+            this.dataGridView1.Size = new System.Drawing.Size(1107, 191);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // CollabPosadaID
             // 
@@ -442,14 +456,14 @@
             this.Column1.HeaderText = "DateOfStart";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
+            this.Column1.Width = 200;
             // 
             // DateOfEnd
             // 
             this.DateOfEnd.HeaderText = "DateOfEnd";
             this.DateOfEnd.MinimumWidth = 6;
             this.DateOfEnd.Name = "DateOfEnd";
-            this.DateOfEnd.Width = 125;
+            this.DateOfEnd.Width = 200;
             // 
             // collaboratorsTableAdapter
             // 
@@ -495,7 +509,7 @@
             this.groupBox3.Size = new System.Drawing.Size(371, 213);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Add Position";
+            this.groupBox3.Text = "Create Position";
             this.groupBox3.Visible = false;
             // 
             // panel1
@@ -558,6 +572,7 @@
             this.posadaIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.posadaBindingSource, "PosadaID", true));
             this.posadaIDTextBox.Location = new System.Drawing.Point(152, 50);
             this.posadaIDTextBox.Name = "posadaIDTextBox";
+            this.posadaIDTextBox.ReadOnly = true;
             this.posadaIDTextBox.Size = new System.Drawing.Size(100, 34);
             this.posadaIDTextBox.TabIndex = 1;
             // 
@@ -574,7 +589,7 @@
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(3, 11);
+            this.button14.Location = new System.Drawing.Point(15, 11);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(108, 39);
             this.button14.TabIndex = 1;
@@ -584,7 +599,7 @@
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(257, 11);
+            this.button15.Location = new System.Drawing.Point(251, 11);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(118, 39);
             this.button15.TabIndex = 4;
@@ -606,9 +621,9 @@
             // 
             this.panel6.Controls.Add(this.button17);
             this.panel6.Controls.Add(this.button18);
-            this.panel6.Location = new System.Drawing.Point(793, 546);
+            this.panel6.Location = new System.Drawing.Point(776, 546);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(292, 56);
+            this.panel6.Size = new System.Drawing.Size(371, 56);
             this.panel6.TabIndex = 15;
             this.panel6.Visible = false;
             // 
@@ -693,7 +708,6 @@
         private System.Windows.Forms.BindingSource posadaBindingSource;
         private SecurityServiceOfUkraineDataSetTableAdapters.CollabPosadaTableAdapter collabPosadaTableAdapter;
         private System.Windows.Forms.BindingSource collabPosadaBindingSource;
-        private System.Windows.Forms.DateTimePicker collabPosadaDateOfEndDateTimePicker;
         private System.Windows.Forms.DateTimePicker collabPosadaDateOfStartDateTimePicker;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -719,6 +733,8 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.DateTimePicker collabPosadaDateOfEndDateTimePicker;
         private System.Windows.Forms.DataGridViewTextBoxColumn CollabPosadaID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CollaboratorSurname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Posada;

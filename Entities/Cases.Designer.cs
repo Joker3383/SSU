@@ -58,13 +58,14 @@
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.secretCaseNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.secretCaseStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.secretCaseDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.secretCaseDateStartDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.secretCaseDateEndDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.secretCaseTableAdapter = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.SecretCaseTableAdapter();
             this.tableAdapterManager = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.TableAdapterManager();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             secretCaseIDLabel = new System.Windows.Forms.Label();
             secretCaseNameLabel = new System.Windows.Forms.Label();
             secretCaseStatusLabel = new System.Windows.Forms.Label();
@@ -231,6 +232,7 @@
             // secretCaseDateEndDateTimePicker
             // 
             this.secretCaseDateEndDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.secretCaseBindingSource, "SecretCaseDateEnd", true));
+            this.secretCaseDateEndDateTimePicker.Enabled = false;
             this.secretCaseDateEndDateTimePicker.Location = new System.Drawing.Point(745, 146);
             this.secretCaseDateEndDateTimePicker.Name = "secretCaseDateEndDateTimePicker";
             this.secretCaseDateEndDateTimePicker.Size = new System.Drawing.Size(200, 34);
@@ -249,6 +251,7 @@
             // secretCaseDateStartDateTimePicker
             // 
             this.secretCaseDateStartDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.secretCaseBindingSource, "SecretCaseDateStart", true));
+            this.secretCaseDateStartDateTimePicker.Enabled = false;
             this.secretCaseDateStartDateTimePicker.Location = new System.Drawing.Point(745, 103);
             this.secretCaseDateStartDateTimePicker.Name = "secretCaseDateStartDateTimePicker";
             this.secretCaseDateStartDateTimePicker.Size = new System.Drawing.Size(200, 34);
@@ -346,15 +349,14 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.secretCaseNameDataGridViewTextBoxColumn,
-            this.secretCaseStatusDataGridViewTextBoxColumn,
-            this.secretCaseDescriptionDataGridViewTextBoxColumn,
-            this.secretCaseDateStartDataGridViewTextBoxColumn,
-            this.secretCaseDateEndDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.secretCaseBindingSource;
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
             this.dataGridView1.Location = new System.Drawing.Point(6, 33);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -362,56 +364,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1011, 203);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // secretCaseNameDataGridViewTextBoxColumn
-            // 
-            this.secretCaseNameDataGridViewTextBoxColumn.DataPropertyName = "SecretCaseName";
-            this.secretCaseNameDataGridViewTextBoxColumn.FillWeight = 115F;
-            this.secretCaseNameDataGridViewTextBoxColumn.HeaderText = "CaseName";
-            this.secretCaseNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.secretCaseNameDataGridViewTextBoxColumn.Name = "secretCaseNameDataGridViewTextBoxColumn";
-            this.secretCaseNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.secretCaseNameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // secretCaseStatusDataGridViewTextBoxColumn
-            // 
-            this.secretCaseStatusDataGridViewTextBoxColumn.DataPropertyName = "SecretCaseStatus";
-            this.secretCaseStatusDataGridViewTextBoxColumn.FillWeight = 110F;
-            this.secretCaseStatusDataGridViewTextBoxColumn.HeaderText = "CaseStatus";
-            this.secretCaseStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.secretCaseStatusDataGridViewTextBoxColumn.Name = "secretCaseStatusDataGridViewTextBoxColumn";
-            this.secretCaseStatusDataGridViewTextBoxColumn.ReadOnly = true;
-            this.secretCaseStatusDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // secretCaseDescriptionDataGridViewTextBoxColumn
-            // 
-            this.secretCaseDescriptionDataGridViewTextBoxColumn.DataPropertyName = "SecretCaseDescription";
-            this.secretCaseDescriptionDataGridViewTextBoxColumn.FillWeight = 140F;
-            this.secretCaseDescriptionDataGridViewTextBoxColumn.HeaderText = "CaseDescription";
-            this.secretCaseDescriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.secretCaseDescriptionDataGridViewTextBoxColumn.Name = "secretCaseDescriptionDataGridViewTextBoxColumn";
-            this.secretCaseDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.secretCaseDescriptionDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // secretCaseDateStartDataGridViewTextBoxColumn
-            // 
-            this.secretCaseDateStartDataGridViewTextBoxColumn.DataPropertyName = "SecretCaseDateStart";
-            this.secretCaseDateStartDataGridViewTextBoxColumn.FillWeight = 130F;
-            this.secretCaseDateStartDataGridViewTextBoxColumn.HeaderText = "DateStart";
-            this.secretCaseDateStartDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.secretCaseDateStartDataGridViewTextBoxColumn.Name = "secretCaseDateStartDataGridViewTextBoxColumn";
-            this.secretCaseDateStartDataGridViewTextBoxColumn.ReadOnly = true;
-            this.secretCaseDateStartDataGridViewTextBoxColumn.Width = 130;
-            // 
-            // secretCaseDateEndDataGridViewTextBoxColumn
-            // 
-            this.secretCaseDateEndDataGridViewTextBoxColumn.DataPropertyName = "SecretCaseDateEnd";
-            this.secretCaseDateEndDataGridViewTextBoxColumn.FillWeight = 120F;
-            this.secretCaseDateEndDataGridViewTextBoxColumn.HeaderText = "DateEnd";
-            this.secretCaseDateEndDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.secretCaseDateEndDataGridViewTextBoxColumn.Name = "secretCaseDateEndDataGridViewTextBoxColumn";
-            this.secretCaseDateEndDataGridViewTextBoxColumn.ReadOnly = true;
-            this.secretCaseDateEndDataGridViewTextBoxColumn.Width = 125;
             // 
             // secretCaseTableAdapter
             // 
@@ -436,6 +388,54 @@
             this.tableAdapterManager.SecurityLevelTableAdapter = null;
             this.tableAdapterManager.SecuritySecretTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = SSU.SecurityServiceOfUkraineDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "CaseName";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Status";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Description";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 200;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Date Of Start";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 200;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Date Of End";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 200;
             // 
             // Cases
             // 
@@ -484,11 +484,6 @@
         private System.Windows.Forms.BindingSource secretCaseBindingSource;
         private SecurityServiceOfUkraineDataSetTableAdapters.SecretCaseTableAdapter secretCaseTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn secretCaseIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn secretCaseNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn secretCaseStatusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn secretCaseDescriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn secretCaseDateStartDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn secretCaseDateEndDataGridViewTextBoxColumn;
         private System.Windows.Forms.DateTimePicker secretCaseDateEndDateTimePicker;
         private System.Windows.Forms.DateTimePicker secretCaseDateStartDateTimePicker;
         private System.Windows.Forms.TextBox secretCaseDescriptionTextBox;
@@ -501,5 +496,11 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button6;
         private SecurityServiceOfUkraineDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SSU
@@ -27,6 +20,7 @@ namespace SSU
         }
         private void Cases_Load(object sender, EventArgs e)
         {
+            SelectCases();
             // TODO: This line of code loads data into the 'securityServiceOfUkraineDataSet.SecretCase' table. You can move, or remove it, as needed.
             this.secretCaseTableAdapter.Fill(this.securityServiceOfUkraineDataSet.SecretCase);
 
@@ -39,6 +33,7 @@ namespace SSU
             panel4.Visible = true;
             groupBox1.Visible = true;
             secretCaseBindingSource.AddNew();
+            secretCaseDateStartDateTimePicker.Enabled = true;
         }
         //edit
         private void button4_Click(object sender, EventArgs e)
@@ -48,6 +43,7 @@ namespace SSU
             panel4.Visible = true;
             groupBox1.Visible = true;
             groupBox1.Text = "Change info";
+            secretCaseDateStartDateTimePicker.Enabled = false;
         }
         //delete
         private void button5_Click(object sender, EventArgs e)
@@ -57,6 +53,7 @@ namespace SSU
             panel4.Visible = true;
             groupBox1.Visible = true;
             groupBox1.Text = "Delete info";
+            secretCaseDateStartDateTimePicker.Enabled = false;
         }
         //get
         public void SelectCases()

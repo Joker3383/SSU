@@ -38,6 +38,7 @@
             this.positionOfEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.documentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.documentsOfEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.successEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminAccessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.secretCasesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.operationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +47,6 @@
             this.securityLevelForSecuritySecretToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.securityLevelForEmpoyeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.securirySecretForDocumentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.successEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -140,6 +140,13 @@
             this.documentsOfEmployeesToolStripMenuItem.Text = "Documents of Employees";
             this.documentsOfEmployeesToolStripMenuItem.Click += new System.EventHandler(this.documentsOfEmployeesToolStripMenuItem_Click);
             // 
+            // successEmployeesToolStripMenuItem
+            // 
+            this.successEmployeesToolStripMenuItem.Name = "successEmployeesToolStripMenuItem";
+            this.successEmployeesToolStripMenuItem.Size = new System.Drawing.Size(261, 26);
+            this.successEmployeesToolStripMenuItem.Text = "Success Employees";
+            this.successEmployeesToolStripMenuItem.Click += new System.EventHandler(this.successEmployeesToolStripMenuItem_Click);
+            // 
             // adminAccessToolStripMenuItem
             // 
             this.adminAccessToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -180,6 +187,7 @@
             this.systemAdminAccessToolStripMenuItem.Name = "systemAdminAccessToolStripMenuItem";
             this.systemAdminAccessToolStripMenuItem.Size = new System.Drawing.Size(166, 24);
             this.systemAdminAccessToolStripMenuItem.Text = "System Admin Access";
+            this.systemAdminAccessToolStripMenuItem.Click += new System.EventHandler(this.systemAdminAccessToolStripMenuItem_Click);
             // 
             // securityLevelForSecuritySecretToolStripMenuItem
             // 
@@ -201,13 +209,6 @@
             this.securirySecretForDocumentsToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
             this.securirySecretForDocumentsToolStripMenuItem.Text = "Securiry Secret for Documents";
             this.securirySecretForDocumentsToolStripMenuItem.Click += new System.EventHandler(this.securirySecretForDocumentsToolStripMenuItem_Click);
-            // 
-            // successEmployeesToolStripMenuItem
-            // 
-            this.successEmployeesToolStripMenuItem.Name = "successEmployeesToolStripMenuItem";
-            this.successEmployeesToolStripMenuItem.Size = new System.Drawing.Size(261, 26);
-            this.successEmployeesToolStripMenuItem.Text = "Success Employees";
-            this.successEmployeesToolStripMenuItem.Click += new System.EventHandler(this.successEmployeesToolStripMenuItem_Click);
             // 
             // Menu
             // 

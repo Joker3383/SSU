@@ -21,10 +21,7 @@ namespace SSU
 
 
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+   
 
         private void equipmentBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -36,6 +33,7 @@ namespace SSU
 
         private void Equipment_Load(object sender, EventArgs e)
         {
+            SelectEquipment();
             // TODO: This line of code loads data into the 'securityServiceOfUkraineDataSet.Equipment' table. You can move, or remove it, as needed.
             this.equipmentTableAdapter.Fill(this.securityServiceOfUkraineDataSet.Equipment);
 

@@ -54,12 +54,12 @@
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.documentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documentDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documentDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.documentTableAdapter = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.DocumentTableAdapter();
             this.tableAdapterManager = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.TableAdapterManager();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateOfСonclusion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             documentIDLabel = new System.Windows.Forms.Label();
             documentNameLabel = new System.Windows.Forms.Label();
             documentDescriptionLabel = new System.Windows.Forms.Label();
@@ -301,14 +301,12 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.documentIDDataGridViewTextBoxColumn,
-            this.documentNameDataGridViewTextBoxColumn,
-            this.documentDescriptionDataGridViewTextBoxColumn,
-            this.documentDateDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.documentBindingSource;
+            this.ID,
+            this.column1,
+            this.Description,
+            this.DateOfСonclusion});
             this.dataGridView1.Location = new System.Drawing.Point(6, 33);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -316,42 +314,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(862, 215);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // documentIDDataGridViewTextBoxColumn
-            // 
-            this.documentIDDataGridViewTextBoxColumn.DataPropertyName = "DocumentID";
-            this.documentIDDataGridViewTextBoxColumn.HeaderText = "DocumentID";
-            this.documentIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.documentIDDataGridViewTextBoxColumn.Name = "documentIDDataGridViewTextBoxColumn";
-            this.documentIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.documentIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // documentNameDataGridViewTextBoxColumn
-            // 
-            this.documentNameDataGridViewTextBoxColumn.DataPropertyName = "DocumentName";
-            this.documentNameDataGridViewTextBoxColumn.HeaderText = "DocumentName";
-            this.documentNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.documentNameDataGridViewTextBoxColumn.Name = "documentNameDataGridViewTextBoxColumn";
-            this.documentNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.documentNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // documentDescriptionDataGridViewTextBoxColumn
-            // 
-            this.documentDescriptionDataGridViewTextBoxColumn.DataPropertyName = "DocumentDescription";
-            this.documentDescriptionDataGridViewTextBoxColumn.HeaderText = "DocumentDescription";
-            this.documentDescriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.documentDescriptionDataGridViewTextBoxColumn.Name = "documentDescriptionDataGridViewTextBoxColumn";
-            this.documentDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.documentDescriptionDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // documentDateDataGridViewTextBoxColumn
-            // 
-            this.documentDateDataGridViewTextBoxColumn.DataPropertyName = "DocumentDate";
-            this.documentDateDataGridViewTextBoxColumn.HeaderText = "DocumentDate";
-            this.documentDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.documentDateDataGridViewTextBoxColumn.Name = "documentDateDataGridViewTextBoxColumn";
-            this.documentDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.documentDateDataGridViewTextBoxColumn.Width = 125;
             // 
             // documentTableAdapter
             // 
@@ -376,6 +338,38 @@
             this.tableAdapterManager.SecurityLevelTableAdapter = null;
             this.tableAdapterManager.SecuritySecretTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = SSU.SecurityServiceOfUkraineDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 125;
+            // 
+            // column1
+            // 
+            this.column1.HeaderText = "Name";
+            this.column1.MinimumWidth = 6;
+            this.column1.Name = "column1";
+            this.column1.ReadOnly = true;
+            this.column1.Width = 125;
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Description";
+            this.Description.MinimumWidth = 6;
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
+            this.Description.Width = 175;
+            // 
+            // DateOfСonclusion
+            // 
+            this.DateOfСonclusion.HeaderText = "Date Of Сonclusion";
+            this.DateOfСonclusion.MinimumWidth = 6;
+            this.DateOfСonclusion.Name = "DateOfСonclusion";
+            this.DateOfСonclusion.ReadOnly = true;
+            this.DateOfСonclusion.Width = 250;
             // 
             // Documents
             // 
@@ -432,10 +426,10 @@
         private System.Windows.Forms.TextBox documentDescriptionTextBox;
         private System.Windows.Forms.TextBox documentNameTextBox;
         private System.Windows.Forms.TextBox documentIDTextBox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn documentIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn documentNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn documentDescriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn documentDateDataGridViewTextBoxColumn;
         private SecurityServiceOfUkraineDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateOfСonclusion;
     }
 }

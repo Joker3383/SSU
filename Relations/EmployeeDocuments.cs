@@ -41,7 +41,10 @@ namespace SSU
             panel3.Visible = false;
             panel4.Visible = true;
             groupBox1.Visible = true;
+            comboBox1.Enabled = true;
+            comboBox2.Enabled = true;
             collabDocumBindingSource.AddNew();
+            collabDocumDateOfStartDateTimePicker.Enabled = true;
         }
         //edit
         private void button4_Click(object sender, EventArgs e)
@@ -50,7 +53,11 @@ namespace SSU
             panel3.Visible = false;
             panel4.Visible = true;
             groupBox1.Visible = true;
+            comboBox1.Enabled = false;
+            comboBox2.Enabled = true;
             groupBox1.Text = "Change info";
+            collabDocumDateOfStartDateTimePicker.Enabled = false;
+            collabDocumDateOfStartDateTimePicker.Value = DateTime.Now;
         }
         //delete
         private void button5_Click(object sender, EventArgs e)
@@ -59,7 +66,11 @@ namespace SSU
             panel3.Visible = false;
             panel4.Visible = true;
             groupBox1.Visible = true;
+            comboBox1.Enabled = false;
+            comboBox2.Enabled = false;
             groupBox1.Text = "Delete info";
+            collabDocumDateOfStartDateTimePicker.Enabled = false;
+            collabDocumDateOfEndDateTimePicker.Value = DateTime.Now;
         }
 
         //select data
@@ -107,7 +118,6 @@ namespace SSU
                 MessageBox.Show("Not all required fields are set");
                 return;
             }
-            if (flag == 3) collabDocumBindingSource.RemoveCurrent();
 
             collabDocumBindingNavigatorSaveItem_Click(sender, e);
             SelectData();
@@ -156,10 +166,7 @@ namespace SSU
             documents.Show();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {

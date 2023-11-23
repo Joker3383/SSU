@@ -16,6 +16,8 @@ namespace SSU
 
         int flag = 0;
         int flagSL = 0;
+
+        Employees employees;
         public EmployeeSecLevel()
         {
             InitializeComponent();
@@ -50,7 +52,7 @@ namespace SSU
         public void SelectData()
         {
             int i = 0;
-            string sqlExpression = "select CollabSecLevel.CollabSecLevelID, Collaborators.CollaboratorSurname, SecurityLevel.SecuriryLevel, CollabSecLevel.CollabSecLevelDateOfStart, CollabSecLevel.CollabSecLevelDateOfStart " +
+            string sqlExpression = "select CollabSecLevel.CollabSecLevelID, Collaborators.CollaboratorSurname, SecurityLevel.SecuriryLevel, CollabSecLevel.CollabSecLevelDateOfStart, CollabSecLevel.CollabSecLevelDateOfEnd " +
                 "from CollabSecLevel " +
                 "join Collaborators on CollabSecLevel.CollaboratorID = Collaborators.CollaboratorID " +
                 "join SecurityLevel on CollabSecLevel.SecurityLevelID = SecurityLevel.SecuriryLevel";
@@ -90,6 +92,9 @@ namespace SSU
             panel3.Visible = false;
             panel4.Visible = true;
             groupBox1.Visible = true;
+            collabSecLevelDateOfStartDateTimePicker.Enabled = true;
+            comboBox1.Enabled = true;
+            comboBox2.Enabled = true;
             collabSecLevelBindingSource.AddNew();
 
         }
@@ -100,7 +105,11 @@ namespace SSU
             panel3.Visible = false;
             panel4.Visible = true;
             groupBox1.Visible = true;
+            comboBox1.Enabled = false;
+            comboBox2.Enabled = true;
+            collabSecLevelDateOfStartDateTimePicker.Enabled = false;
             groupBox1.Text = "Change Securiry Level for Employee";
+            collabSecLevelDateOfStartDateTimePicker.Value = DateTime.Now;
         }
         //delete
         private void button5_Click(object sender, EventArgs e)
@@ -109,23 +118,26 @@ namespace SSU
             panel3.Visible = false;
             panel4.Visible = true;
             groupBox1.Visible = true;
+            comboBox1.Enabled = false;
+            comboBox2.Enabled = false;
+            collabSecLevelDateOfStartDateTimePicker.Enabled = false;
             groupBox1.Text = "Delete Securiry Level for Employee";
+            collabSecLevelDateOfEndDateTimePicker.Value = DateTime.Now;
         }
+
         //save
         private void button3_Click(object sender, EventArgs e)
         {
             if ((flag == 2 || flag == 1) &&
                (
                comboBox1.Text == "" ||
-               comboBox2.Text == "" ||
-               collabSecLevelDateOfEndDateTimePicker == null ||
-               collabSecLevelDateOfStartDateTimePicker == null
-               ))
+               comboBox2.Text == "" )
+               )
+
             {
                 MessageBox.Show("Not all required fields are set");
                 return;
             }
-            if (flag == 3) collabSecLevelBindingSource.RemoveCurrent();
 
             collabSecLevelBindingNavigatorSaveItem_Click(sender, e);
             SelectData();
@@ -141,6 +153,7 @@ namespace SSU
             panel4.Visible = false;
             groupBox1.Visible = false;
         }
+
         //SL
         private void button19_Click(object sender, EventArgs e)
         {
@@ -239,6 +252,12 @@ namespace SSU
         private void button16_Click(object sender, EventArgs e)
         {
             securityLevelBindingSource.MoveLast();
+        }
+        //show Employees
+        private void button20_Click(object sender, EventArgs e)
+        {
+            employees = new Employees();
+            employees.Show();
         }
     }
 }

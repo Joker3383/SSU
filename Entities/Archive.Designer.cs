@@ -53,12 +53,12 @@
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.secretCaseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.archiveDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.archiveDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.archiveTableAdapter = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.ArchiveTableAdapter();
             this.tableAdapterManager = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.TableAdapterManager();
             this.secretCaseTableAdapter = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.SecretCaseTableAdapter();
+            this.CaseID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ArchiveDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ArchiveDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             secretCaseIDLabel = new System.Windows.Forms.Label();
             archiveDescriptionLabel = new System.Windows.Forms.Label();
             archiveDateLabel = new System.Windows.Forms.Label();
@@ -291,13 +291,11 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.secretCaseIDDataGridViewTextBoxColumn,
-            this.archiveDescriptionDataGridViewTextBoxColumn,
-            this.archiveDateDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.archiveBindingSource;
+            this.CaseID,
+            this.ArchiveDescription,
+            this.ArchiveDate});
             this.dataGridView1.Location = new System.Drawing.Point(6, 33);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -305,33 +303,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(929, 278);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // secretCaseIDDataGridViewTextBoxColumn
-            // 
-            this.secretCaseIDDataGridViewTextBoxColumn.DataPropertyName = "SecretCaseID";
-            this.secretCaseIDDataGridViewTextBoxColumn.HeaderText = "SecretCaseID";
-            this.secretCaseIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.secretCaseIDDataGridViewTextBoxColumn.Name = "secretCaseIDDataGridViewTextBoxColumn";
-            this.secretCaseIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.secretCaseIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // archiveDescriptionDataGridViewTextBoxColumn
-            // 
-            this.archiveDescriptionDataGridViewTextBoxColumn.DataPropertyName = "ArchiveDescription";
-            this.archiveDescriptionDataGridViewTextBoxColumn.HeaderText = "ArchiveDescription";
-            this.archiveDescriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.archiveDescriptionDataGridViewTextBoxColumn.Name = "archiveDescriptionDataGridViewTextBoxColumn";
-            this.archiveDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.archiveDescriptionDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // archiveDateDataGridViewTextBoxColumn
-            // 
-            this.archiveDateDataGridViewTextBoxColumn.DataPropertyName = "ArchiveDate";
-            this.archiveDateDataGridViewTextBoxColumn.HeaderText = "ArchiveDate";
-            this.archiveDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.archiveDateDataGridViewTextBoxColumn.Name = "archiveDateDataGridViewTextBoxColumn";
-            this.archiveDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.archiveDateDataGridViewTextBoxColumn.Width = 125;
             // 
             // archiveTableAdapter
             // 
@@ -360,6 +331,30 @@
             // secretCaseTableAdapter
             // 
             this.secretCaseTableAdapter.ClearBeforeFill = true;
+            // 
+            // CaseID
+            // 
+            this.CaseID.HeaderText = "CaseID";
+            this.CaseID.MinimumWidth = 6;
+            this.CaseID.Name = "CaseID";
+            this.CaseID.ReadOnly = true;
+            this.CaseID.Width = 125;
+            // 
+            // ArchiveDescription
+            // 
+            this.ArchiveDescription.HeaderText = "Archive Description";
+            this.ArchiveDescription.MinimumWidth = 6;
+            this.ArchiveDescription.Name = "ArchiveDescription";
+            this.ArchiveDescription.ReadOnly = true;
+            this.ArchiveDescription.Width = 250;
+            // 
+            // ArchiveDate
+            // 
+            this.ArchiveDate.HeaderText = "Date Of Archiving ";
+            this.ArchiveDate.MinimumWidth = 6;
+            this.ArchiveDate.Name = "ArchiveDate";
+            this.ArchiveDate.ReadOnly = true;
+            this.ArchiveDate.Width = 240;
             // 
             // Archive
             // 
@@ -419,8 +414,8 @@
         private System.Windows.Forms.TextBox archiveDescriptionTextBox;
         private SecurityServiceOfUkraineDataSetTableAdapters.SecretCaseTableAdapter secretCaseTableAdapter;
         private System.Windows.Forms.BindingSource secretCaseBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn secretCaseIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn archiveDescriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn archiveDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CaseID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ArchiveDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ArchiveDate;
     }
 }

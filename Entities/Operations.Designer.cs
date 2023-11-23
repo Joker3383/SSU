@@ -45,41 +45,41 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.operationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.securityServiceOfUkraineDataSet = new SSU.SecurityServiceOfUkraineDataSet();
+            this.equipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.secretCaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.locationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.collaboratorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.operationDescriptionTextBox = new System.Windows.Forms.TextBox();
+            this.operationDateOfEndDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.operationDateOfStartDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.operationIDTextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.securityServiceOfUkraineDataSet = new SSU.SecurityServiceOfUkraineDataSet();
-            this.operationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.operationTableAdapter = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.OperationTableAdapter();
             this.tableAdapterManager = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.TableAdapterManager();
-            this.operationIDTextBox = new System.Windows.Forms.TextBox();
-            this.operationDescriptionTextBox = new System.Windows.Forms.TextBox();
-            this.operationDateOfStartDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.operationDateOfEndDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.operationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.secretCaseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.equipmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.locationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.collaboratorIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.operationDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.operationDateOfStartDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.operationDateOfEndDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.equipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.equipmentTableAdapter = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.EquipmentTableAdapter();
-            this.locationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.locationTableAdapter = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.LocationTableAdapter();
-            this.secretCaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.secretCaseTableAdapter = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.SecretCaseTableAdapter();
-            this.collaboratorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.collaboratorsTableAdapter = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.CollaboratorsTableAdapter();
+            this.equipmentTableAdapter = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.EquipmentTableAdapter();
+            this.locationTableAdapter = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.LocationTableAdapter();
+            this.secretCaseTableAdapter = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.SecretCaseTableAdapter();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             operationIDLabel = new System.Windows.Forms.Label();
             secretCaseIDLabel = new System.Windows.Forms.Label();
             equipmentIDLabel = new System.Windows.Forms.Label();
@@ -91,16 +91,88 @@
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.securityServiceOfUkraineDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.operationBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.securityServiceOfUkraineDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipmentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.locationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secretCaseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.collaboratorsBindingSource)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // operationIDLabel
+            // 
+            operationIDLabel.AutoSize = true;
+            operationIDLabel.Location = new System.Drawing.Point(6, 33);
+            operationIDLabel.Name = "operationIDLabel";
+            operationIDLabel.Size = new System.Drawing.Size(155, 29);
+            operationIDLabel.TabIndex = 7;
+            operationIDLabel.Text = "Operation ID:";
+            // 
+            // secretCaseIDLabel
+            // 
+            secretCaseIDLabel.AutoSize = true;
+            secretCaseIDLabel.Location = new System.Drawing.Point(6, 81);
+            secretCaseIDLabel.Name = "secretCaseIDLabel";
+            secretCaseIDLabel.Size = new System.Drawing.Size(180, 29);
+            secretCaseIDLabel.TabIndex = 8;
+            secretCaseIDLabel.Text = "Secret Case ID:";
+            // 
+            // equipmentIDLabel
+            // 
+            equipmentIDLabel.AutoSize = true;
+            equipmentIDLabel.Location = new System.Drawing.Point(6, 183);
+            equipmentIDLabel.Name = "equipmentIDLabel";
+            equipmentIDLabel.Size = new System.Drawing.Size(164, 29);
+            equipmentIDLabel.TabIndex = 9;
+            equipmentIDLabel.Text = "Equipment ID:";
+            // 
+            // locationIDLabel
+            // 
+            locationIDLabel.AutoSize = true;
+            locationIDLabel.Location = new System.Drawing.Point(6, 129);
+            locationIDLabel.Name = "locationIDLabel";
+            locationIDLabel.Size = new System.Drawing.Size(139, 29);
+            locationIDLabel.TabIndex = 10;
+            locationIDLabel.Text = "Location ID:";
+            // 
+            // collaboratorIDLabel
+            // 
+            collaboratorIDLabel.AutoSize = true;
+            collaboratorIDLabel.Location = new System.Drawing.Point(780, 36);
+            collaboratorIDLabel.Name = "collaboratorIDLabel";
+            collaboratorIDLabel.Size = new System.Drawing.Size(181, 29);
+            collaboratorIDLabel.TabIndex = 11;
+            collaboratorIDLabel.Text = "Collaborator ID:";
+            // 
+            // operationDescriptionLabel
+            // 
+            operationDescriptionLabel.AutoSize = true;
+            operationDescriptionLabel.Location = new System.Drawing.Point(314, 180);
+            operationDescriptionLabel.Name = "operationDescriptionLabel";
+            operationDescriptionLabel.Size = new System.Drawing.Size(254, 29);
+            operationDescriptionLabel.TabIndex = 12;
+            operationDescriptionLabel.Text = "Operation Description:";
+            // 
+            // operationDateOfStartLabel
+            // 
+            operationDateOfStartLabel.AutoSize = true;
+            operationDateOfStartLabel.Location = new System.Drawing.Point(300, 33);
+            operationDateOfStartLabel.Name = "operationDateOfStartLabel";
+            operationDateOfStartLabel.Size = new System.Drawing.Size(268, 29);
+            operationDateOfStartLabel.TabIndex = 13;
+            operationDateOfStartLabel.Text = "Operation Date Of Start:";
+            // 
+            // operationDateOfEndLabel
+            // 
+            operationDateOfEndLabel.AutoSize = true;
+            operationDateOfEndLabel.Location = new System.Drawing.Point(306, 81);
+            operationDateOfEndLabel.Name = "operationDateOfEndLabel";
+            operationDateOfEndLabel.Size = new System.Drawing.Size(262, 29);
+            operationDateOfEndLabel.TabIndex = 15;
+            operationDateOfEndLabel.Text = "Operation Date Of End:";
             // 
             // panel3
             // 
@@ -199,15 +271,116 @@
             this.groupBox1.Text = "Add Operation";
             this.groupBox1.Visible = false;
             // 
-            // groupBox2
+            // comboBox4
             // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1157, 374);
-            this.groupBox2.TabIndex = 12;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Operations";
+            this.comboBox4.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.operationBindingSource, "EquipmentID", true));
+            this.comboBox4.DataSource = this.equipmentBindingSource;
+            this.comboBox4.DisplayMember = "NameEquip";
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(171, 177);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(129, 37);
+            this.comboBox4.TabIndex = 20;
+            this.comboBox4.ValueMember = "EquipmentID";
+            // 
+            // operationBindingSource
+            // 
+            this.operationBindingSource.DataMember = "Operation";
+            this.operationBindingSource.DataSource = this.securityServiceOfUkraineDataSet;
+            // 
+            // securityServiceOfUkraineDataSet
+            // 
+            this.securityServiceOfUkraineDataSet.DataSetName = "SecurityServiceOfUkraineDataSet";
+            this.securityServiceOfUkraineDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // equipmentBindingSource
+            // 
+            this.equipmentBindingSource.DataMember = "Equipment";
+            this.equipmentBindingSource.DataSource = this.securityServiceOfUkraineDataSet;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.operationBindingSource, "SecretCaseID", true));
+            this.comboBox3.DataSource = this.secretCaseBindingSource;
+            this.comboBox3.DisplayMember = "SecretCaseName";
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(179, 78);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 37);
+            this.comboBox3.TabIndex = 19;
+            this.comboBox3.ValueMember = "SecretCaseID";
+            // 
+            // secretCaseBindingSource
+            // 
+            this.secretCaseBindingSource.DataMember = "SecretCase";
+            this.secretCaseBindingSource.DataSource = this.securityServiceOfUkraineDataSet;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.operationBindingSource, "LocationID", true));
+            this.comboBox2.DataSource = this.locationBindingSource;
+            this.comboBox2.DisplayMember = "Adress";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(156, 125);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(144, 37);
+            this.comboBox2.TabIndex = 18;
+            this.comboBox2.ValueMember = "LocationID";
+            // 
+            // locationBindingSource
+            // 
+            this.locationBindingSource.DataMember = "Location";
+            this.locationBindingSource.DataSource = this.securityServiceOfUkraineDataSet;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.operationBindingSource, "CollaboratorID", true));
+            this.comboBox1.DataSource = this.collaboratorsBindingSource;
+            this.comboBox1.DisplayMember = "CollaboratorName";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(966, 36);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 37);
+            this.comboBox1.TabIndex = 17;
+            this.comboBox1.ValueMember = "CollaboratorID";
+            // 
+            // collaboratorsBindingSource
+            // 
+            this.collaboratorsBindingSource.DataMember = "Collaborators";
+            this.collaboratorsBindingSource.DataSource = this.securityServiceOfUkraineDataSet;
+            // 
+            // operationDescriptionTextBox
+            // 
+            this.operationDescriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.operationBindingSource, "OperationDescription", true));
+            this.operationDescriptionTextBox.Location = new System.Drawing.Point(574, 180);
+            this.operationDescriptionTextBox.Name = "operationDescriptionTextBox";
+            this.operationDescriptionTextBox.Size = new System.Drawing.Size(493, 34);
+            this.operationDescriptionTextBox.TabIndex = 13;
+            // 
+            // operationDateOfEndDateTimePicker
+            // 
+            this.operationDateOfEndDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.operationBindingSource, "OperationDateOfEnd", true));
+            this.operationDateOfEndDateTimePicker.Location = new System.Drawing.Point(574, 81);
+            this.operationDateOfEndDateTimePicker.Name = "operationDateOfEndDateTimePicker";
+            this.operationDateOfEndDateTimePicker.Size = new System.Drawing.Size(200, 34);
+            this.operationDateOfEndDateTimePicker.TabIndex = 16;
+            // 
+            // operationDateOfStartDateTimePicker
+            // 
+            this.operationDateOfStartDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.operationBindingSource, "OperationDateOfStart", true));
+            this.operationDateOfStartDateTimePicker.Location = new System.Drawing.Point(574, 33);
+            this.operationDateOfStartDateTimePicker.Name = "operationDateOfStartDateTimePicker";
+            this.operationDateOfStartDateTimePicker.Size = new System.Drawing.Size(200, 34);
+            this.operationDateOfStartDateTimePicker.TabIndex = 14;
+            // 
+            // operationIDTextBox
+            // 
+            this.operationIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.operationBindingSource, "OperationID", true));
+            this.operationIDTextBox.Location = new System.Drawing.Point(172, 33);
+            this.operationIDTextBox.Name = "operationIDTextBox";
+            this.operationIDTextBox.ReadOnly = true;
+            this.operationIDTextBox.Size = new System.Drawing.Size(120, 34);
+            this.operationIDTextBox.TabIndex = 8;
             // 
             // panel2
             // 
@@ -256,15 +429,34 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // securityServiceOfUkraineDataSet
+            // groupBox2
             // 
-            this.securityServiceOfUkraineDataSet.DataSetName = "SecurityServiceOfUkraineDataSet";
-            this.securityServiceOfUkraineDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1157, 374);
+            this.groupBox2.TabIndex = 12;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Operations";
             // 
-            // operationBindingSource
+            // dataGridView1
             // 
-            this.operationBindingSource.DataMember = "Operation";
-            this.operationBindingSource.DataSource = this.securityServiceOfUkraineDataSet;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7});
+            this.dataGridView1.Location = new System.Drawing.Point(6, 33);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1143, 322);
+            this.dataGridView1.TabIndex = 0;
             // 
             // operationTableAdapter
             // 
@@ -290,280 +482,75 @@
             this.tableAdapterManager.SecuritySecretTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = SSU.SecurityServiceOfUkraineDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // operationIDLabel
+            // collaboratorsTableAdapter
             // 
-            operationIDLabel.AutoSize = true;
-            operationIDLabel.Location = new System.Drawing.Point(6, 33);
-            operationIDLabel.Name = "operationIDLabel";
-            operationIDLabel.Size = new System.Drawing.Size(155, 29);
-            operationIDLabel.TabIndex = 7;
-            operationIDLabel.Text = "Operation ID:";
-            // 
-            // operationIDTextBox
-            // 
-            this.operationIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.operationBindingSource, "OperationID", true));
-            this.operationIDTextBox.Location = new System.Drawing.Point(172, 33);
-            this.operationIDTextBox.Name = "operationIDTextBox";
-            this.operationIDTextBox.ReadOnly = true;
-            this.operationIDTextBox.Size = new System.Drawing.Size(120, 34);
-            this.operationIDTextBox.TabIndex = 8;
-            // 
-            // secretCaseIDLabel
-            // 
-            secretCaseIDLabel.AutoSize = true;
-            secretCaseIDLabel.Location = new System.Drawing.Point(6, 81);
-            secretCaseIDLabel.Name = "secretCaseIDLabel";
-            secretCaseIDLabel.Size = new System.Drawing.Size(180, 29);
-            secretCaseIDLabel.TabIndex = 8;
-            secretCaseIDLabel.Text = "Secret Case ID:";
-            // 
-            // equipmentIDLabel
-            // 
-            equipmentIDLabel.AutoSize = true;
-            equipmentIDLabel.Location = new System.Drawing.Point(6, 183);
-            equipmentIDLabel.Name = "equipmentIDLabel";
-            equipmentIDLabel.Size = new System.Drawing.Size(164, 29);
-            equipmentIDLabel.TabIndex = 9;
-            equipmentIDLabel.Text = "Equipment ID:";
-            // 
-            // locationIDLabel
-            // 
-            locationIDLabel.AutoSize = true;
-            locationIDLabel.Location = new System.Drawing.Point(6, 129);
-            locationIDLabel.Name = "locationIDLabel";
-            locationIDLabel.Size = new System.Drawing.Size(139, 29);
-            locationIDLabel.TabIndex = 10;
-            locationIDLabel.Text = "Location ID:";
-            // 
-            // collaboratorIDLabel
-            // 
-            collaboratorIDLabel.AutoSize = true;
-            collaboratorIDLabel.Location = new System.Drawing.Point(780, 36);
-            collaboratorIDLabel.Name = "collaboratorIDLabel";
-            collaboratorIDLabel.Size = new System.Drawing.Size(181, 29);
-            collaboratorIDLabel.TabIndex = 11;
-            collaboratorIDLabel.Text = "Collaborator ID:";
-            // 
-            // operationDescriptionLabel
-            // 
-            operationDescriptionLabel.AutoSize = true;
-            operationDescriptionLabel.Location = new System.Drawing.Point(314, 180);
-            operationDescriptionLabel.Name = "operationDescriptionLabel";
-            operationDescriptionLabel.Size = new System.Drawing.Size(254, 29);
-            operationDescriptionLabel.TabIndex = 12;
-            operationDescriptionLabel.Text = "Operation Description:";
-            // 
-            // operationDescriptionTextBox
-            // 
-            this.operationDescriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.operationBindingSource, "OperationDescription", true));
-            this.operationDescriptionTextBox.Location = new System.Drawing.Point(574, 180);
-            this.operationDescriptionTextBox.Name = "operationDescriptionTextBox";
-            this.operationDescriptionTextBox.Size = new System.Drawing.Size(493, 34);
-            this.operationDescriptionTextBox.TabIndex = 13;
-            // 
-            // operationDateOfStartLabel
-            // 
-            operationDateOfStartLabel.AutoSize = true;
-            operationDateOfStartLabel.Location = new System.Drawing.Point(300, 33);
-            operationDateOfStartLabel.Name = "operationDateOfStartLabel";
-            operationDateOfStartLabel.Size = new System.Drawing.Size(268, 29);
-            operationDateOfStartLabel.TabIndex = 13;
-            operationDateOfStartLabel.Text = "Operation Date Of Start:";
-            // 
-            // operationDateOfStartDateTimePicker
-            // 
-            this.operationDateOfStartDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.operationBindingSource, "OperationDateOfStart", true));
-            this.operationDateOfStartDateTimePicker.Location = new System.Drawing.Point(574, 33);
-            this.operationDateOfStartDateTimePicker.Name = "operationDateOfStartDateTimePicker";
-            this.operationDateOfStartDateTimePicker.Size = new System.Drawing.Size(200, 34);
-            this.operationDateOfStartDateTimePicker.TabIndex = 14;
-            // 
-            // operationDateOfEndLabel
-            // 
-            operationDateOfEndLabel.AutoSize = true;
-            operationDateOfEndLabel.Location = new System.Drawing.Point(306, 81);
-            operationDateOfEndLabel.Name = "operationDateOfEndLabel";
-            operationDateOfEndLabel.Size = new System.Drawing.Size(262, 29);
-            operationDateOfEndLabel.TabIndex = 15;
-            operationDateOfEndLabel.Text = "Operation Date Of End:";
-            // 
-            // operationDateOfEndDateTimePicker
-            // 
-            this.operationDateOfEndDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.operationBindingSource, "OperationDateOfEnd", true));
-            this.operationDateOfEndDateTimePicker.Location = new System.Drawing.Point(574, 81);
-            this.operationDateOfEndDateTimePicker.Name = "operationDateOfEndDateTimePicker";
-            this.operationDateOfEndDateTimePicker.Size = new System.Drawing.Size(200, 34);
-            this.operationDateOfEndDateTimePicker.TabIndex = 16;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.operationIDDataGridViewTextBoxColumn,
-            this.secretCaseIDDataGridViewTextBoxColumn,
-            this.equipmentIDDataGridViewTextBoxColumn,
-            this.locationIDDataGridViewTextBoxColumn,
-            this.collaboratorIDDataGridViewTextBoxColumn,
-            this.operationDescriptionDataGridViewTextBoxColumn,
-            this.operationDateOfStartDataGridViewTextBoxColumn,
-            this.operationDateOfEndDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.operationBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 33);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1143, 322);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // operationIDDataGridViewTextBoxColumn
-            // 
-            this.operationIDDataGridViewTextBoxColumn.DataPropertyName = "OperationID";
-            this.operationIDDataGridViewTextBoxColumn.HeaderText = "OperationID";
-            this.operationIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.operationIDDataGridViewTextBoxColumn.Name = "operationIDDataGridViewTextBoxColumn";
-            this.operationIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.operationIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // secretCaseIDDataGridViewTextBoxColumn
-            // 
-            this.secretCaseIDDataGridViewTextBoxColumn.DataPropertyName = "SecretCaseID";
-            this.secretCaseIDDataGridViewTextBoxColumn.HeaderText = "SecretCaseID";
-            this.secretCaseIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.secretCaseIDDataGridViewTextBoxColumn.Name = "secretCaseIDDataGridViewTextBoxColumn";
-            this.secretCaseIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // equipmentIDDataGridViewTextBoxColumn
-            // 
-            this.equipmentIDDataGridViewTextBoxColumn.DataPropertyName = "EquipmentID";
-            this.equipmentIDDataGridViewTextBoxColumn.HeaderText = "EquipmentID";
-            this.equipmentIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.equipmentIDDataGridViewTextBoxColumn.Name = "equipmentIDDataGridViewTextBoxColumn";
-            this.equipmentIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // locationIDDataGridViewTextBoxColumn
-            // 
-            this.locationIDDataGridViewTextBoxColumn.DataPropertyName = "LocationID";
-            this.locationIDDataGridViewTextBoxColumn.HeaderText = "LocationID";
-            this.locationIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.locationIDDataGridViewTextBoxColumn.Name = "locationIDDataGridViewTextBoxColumn";
-            this.locationIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // collaboratorIDDataGridViewTextBoxColumn
-            // 
-            this.collaboratorIDDataGridViewTextBoxColumn.DataPropertyName = "CollaboratorID";
-            this.collaboratorIDDataGridViewTextBoxColumn.HeaderText = "CollaboratorID";
-            this.collaboratorIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.collaboratorIDDataGridViewTextBoxColumn.Name = "collaboratorIDDataGridViewTextBoxColumn";
-            this.collaboratorIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // operationDescriptionDataGridViewTextBoxColumn
-            // 
-            this.operationDescriptionDataGridViewTextBoxColumn.DataPropertyName = "OperationDescription";
-            this.operationDescriptionDataGridViewTextBoxColumn.HeaderText = "OperationDescription";
-            this.operationDescriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.operationDescriptionDataGridViewTextBoxColumn.Name = "operationDescriptionDataGridViewTextBoxColumn";
-            this.operationDescriptionDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // operationDateOfStartDataGridViewTextBoxColumn
-            // 
-            this.operationDateOfStartDataGridViewTextBoxColumn.DataPropertyName = "OperationDateOfStart";
-            this.operationDateOfStartDataGridViewTextBoxColumn.HeaderText = "OperationDateOfStart";
-            this.operationDateOfStartDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.operationDateOfStartDataGridViewTextBoxColumn.Name = "operationDateOfStartDataGridViewTextBoxColumn";
-            this.operationDateOfStartDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // operationDateOfEndDataGridViewTextBoxColumn
-            // 
-            this.operationDateOfEndDataGridViewTextBoxColumn.DataPropertyName = "OperationDateOfEnd";
-            this.operationDateOfEndDataGridViewTextBoxColumn.HeaderText = "OperationDateOfEnd";
-            this.operationDateOfEndDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.operationDateOfEndDataGridViewTextBoxColumn.Name = "operationDateOfEndDataGridViewTextBoxColumn";
-            this.operationDateOfEndDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.operationBindingSource, "CollaboratorID", true));
-            this.comboBox1.DataSource = this.collaboratorsBindingSource;
-            this.comboBox1.DisplayMember = "CollaboratorName";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(966, 36);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 37);
-            this.comboBox1.TabIndex = 17;
-            this.comboBox1.ValueMember = "CollaboratorID";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.operationBindingSource, "LocationID", true));
-            this.comboBox2.DataSource = this.locationBindingSource;
-            this.comboBox2.DisplayMember = "Adress";
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(156, 125);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(144, 37);
-            this.comboBox2.TabIndex = 18;
-            this.comboBox2.ValueMember = "LocationID";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.operationBindingSource, "SecretCaseID", true));
-            this.comboBox3.DataSource = this.secretCaseBindingSource;
-            this.comboBox3.DisplayMember = "SecretCaseName";
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(179, 78);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 37);
-            this.comboBox3.TabIndex = 19;
-            this.comboBox3.ValueMember = "SecretCaseID";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.operationBindingSource, "EquipmentID", true));
-            this.comboBox4.DataSource = this.equipmentBindingSource;
-            this.comboBox4.DisplayMember = "NameEquip";
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(171, 177);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(129, 37);
-            this.comboBox4.TabIndex = 20;
-            this.comboBox4.ValueMember = "EquipmentID";
-            // 
-            // equipmentBindingSource
-            // 
-            this.equipmentBindingSource.DataMember = "Equipment";
-            this.equipmentBindingSource.DataSource = this.securityServiceOfUkraineDataSet;
+            this.collaboratorsTableAdapter.ClearBeforeFill = true;
             // 
             // equipmentTableAdapter
             // 
             this.equipmentTableAdapter.ClearBeforeFill = true;
             // 
-            // locationBindingSource
-            // 
-            this.locationBindingSource.DataMember = "Location";
-            this.locationBindingSource.DataSource = this.securityServiceOfUkraineDataSet;
-            // 
             // locationTableAdapter
             // 
             this.locationTableAdapter.ClearBeforeFill = true;
-            // 
-            // secretCaseBindingSource
-            // 
-            this.secretCaseBindingSource.DataMember = "SecretCase";
-            this.secretCaseBindingSource.DataSource = this.securityServiceOfUkraineDataSet;
             // 
             // secretCaseTableAdapter
             // 
             this.secretCaseTableAdapter.ClearBeforeFill = true;
             // 
-            // collaboratorsBindingSource
+            // ID
             // 
-            this.collaboratorsBindingSource.DataMember = "Collaborators";
-            this.collaboratorsBindingSource.DataSource = this.securityServiceOfUkraineDataSet;
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.Width = 75;
             // 
-            // collaboratorsTableAdapter
+            // Column1
             // 
-            this.collaboratorsTableAdapter.ClearBeforeFill = true;
+            this.Column1.HeaderText = "CaseID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "EquipID";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "LocationID";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "EmployeeID";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 135;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Description";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 135;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Date Of Start";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 200;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Date Of End";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 200;
             // 
             // Operations
             // 
@@ -576,7 +563,7 @@
             this.Controls.Add(this.panel3);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Operations";
@@ -587,15 +574,15 @@
             this.panel4.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.securityServiceOfUkraineDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.operationBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.securityServiceOfUkraineDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipmentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.locationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.secretCaseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.collaboratorsBindingSource)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -629,14 +616,6 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn operationIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn secretCaseIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn equipmentIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn locationIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn collaboratorIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn operationDescriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn operationDateOfStartDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn operationDateOfEndDataGridViewTextBoxColumn;
         private SecurityServiceOfUkraineDataSetTableAdapters.EquipmentTableAdapter equipmentTableAdapter;
         private System.Windows.Forms.BindingSource equipmentBindingSource;
         private SecurityServiceOfUkraineDataSetTableAdapters.LocationTableAdapter locationTableAdapter;
@@ -645,5 +624,13 @@
         private System.Windows.Forms.BindingSource secretCaseBindingSource;
         private SecurityServiceOfUkraineDataSetTableAdapters.CollaboratorsTableAdapter collaboratorsTableAdapter;
         private System.Windows.Forms.BindingSource collaboratorsBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }

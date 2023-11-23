@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SSU
@@ -64,6 +57,8 @@ namespace SSU
         private void button5_Click(object sender, EventArgs e)
         {
             flag = 3;
+            comboBox1.Enabled = false;
+            comboBox2.Enabled = false;
             panel3.Visible = false;
             panel4.Visible = true;
             groupBox1.Visible = true;

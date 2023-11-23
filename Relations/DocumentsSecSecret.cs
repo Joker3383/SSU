@@ -14,6 +14,8 @@ namespace SSU
     public partial class DocumentsSecSecret : Form
     {
         int flag = 0;
+
+        Documents documents;
         public DocumentsSecSecret()
         {
             InitializeComponent();
@@ -53,6 +55,9 @@ namespace SSU
             panel3.Visible = false;
             panel4.Visible = true;
             groupBox1.Visible = true;
+            comboBox1.Enabled = true;
+            comboBox2.Enabled = true;
+            documSecSecretDateOfStartDateTimePicker.Enabled = true;
             documSecSecretBindingSource.AddNew();
         }
         //selectData
@@ -99,15 +104,12 @@ namespace SSU
                 && 
                 (
                 comboBox1.Text == null ||
-                comboBox2.Text == null ||
-                documSecSecretDateOfEndDateTimePicker == null ||
-                documSecSecretDateOfStartDateTimePicker == null 
+                comboBox2.Text == null 
                 ))
             {
                 MessageBox.Show("Not all required fields are set");
                 return;
             }
-            if (flag == 3) documSecSecretBindingSource.RemoveCurrent();
 
             documSecSecretBindingNavigatorSaveItem_Click(sender, e);
             SelectData();
@@ -122,7 +124,11 @@ namespace SSU
             panel3.Visible = false;
             panel4.Visible = true;
             groupBox1.Visible = true;
+            comboBox1.Enabled = false;
+            comboBox2.Enabled = true;
             groupBox1.Text = "Change info";
+            documSecSecretDateOfStartDateTimePicker.Enabled = false;
+            documSecSecretDateOfStartDateTimePicker.Value = DateTime.Now;
         }
         //delete
         private void button5_Click(object sender, EventArgs e)
@@ -131,7 +137,11 @@ namespace SSU
             panel3.Visible = false;
             panel4.Visible = true;
             groupBox1.Visible = true;
+            comboBox1.Enabled = false;
+            comboBox2.Enabled = false;
             groupBox1.Text = "Delete info";
+            documSecSecretDateOfStartDateTimePicker.Enabled = false;
+            documSecSecretDateOfEndDateTimePicker.Value = DateTime.Now;
         }
         //decline
         private void button1_Click(object sender, EventArgs e)
@@ -216,6 +226,8 @@ namespace SSU
             SelectData();
             panel1.Visible = false;
             panel2.Visible = false;
+            panel1.Visible = true;
+            panel2.Visible = true;
             groupBox3.Visible = false;
         }
         // ss decline
@@ -245,6 +257,12 @@ namespace SSU
         private void button16_Click(object sender, EventArgs e)
         {
             securitySecretBindingSource.MoveLast();
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            documents = new Documents();
+            documents.Show();
         }
     }
 }

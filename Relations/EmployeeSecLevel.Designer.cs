@@ -38,6 +38,7 @@
             System.Windows.Forms.Label collabSecLevelDateOfStartLabel;
             System.Windows.Forms.Label collabSecLevelDateOfEndLabel;
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button20 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.collabSecLevelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.securityServiceOfUkraineDataSet = new SSU.SecurityServiceOfUkraineDataSet();
@@ -55,11 +56,6 @@
             this.collabSecLevelIDTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button15 = new System.Windows.Forms.Button();
@@ -87,6 +83,11 @@
             this.tableAdapterManager = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.TableAdapterManager();
             this.collaboratorsTableAdapter = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.CollaboratorsTableAdapter();
             this.collabSecLevelTableAdapter = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.CollabSecLevelTableAdapter();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             securityLevelIDLabel = new System.Windows.Forms.Label();
             securiryLevelLabel = new System.Windows.Forms.Label();
             securityLevelDescriptionLabel = new System.Windows.Forms.Label();
@@ -185,6 +186,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button20);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.button19);
@@ -205,13 +207,22 @@
             this.groupBox1.Text = "Add Security Level for Employee";
             this.groupBox1.Visible = false;
             // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(394, 89);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(77, 38);
+            this.button20.TabIndex = 19;
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
             // comboBox2
             // 
             this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.collabSecLevelBindingSource, "SecurityLevelID", true));
             this.comboBox2.DataSource = this.securityLevelBindingSource;
             this.comboBox2.DisplayMember = "SecuriryLevel";
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(183, 127);
+            this.comboBox2.Location = new System.Drawing.Point(183, 132);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 37);
             this.comboBox2.TabIndex = 18;
@@ -251,11 +262,10 @@
             // 
             // button19
             // 
-            this.button19.Location = new System.Drawing.Point(412, 40);
+            this.button19.Location = new System.Drawing.Point(313, 132);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(75, 72);
+            this.button19.Size = new System.Drawing.Size(75, 37);
             this.button19.TabIndex = 16;
-            this.button19.Text = "SL";
             this.button19.UseVisualStyleBackColor = true;
             this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
@@ -272,7 +282,7 @@
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(14, 3);
+            this.button11.Location = new System.Drawing.Point(14, 8);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(25, 23);
             this.button11.TabIndex = 3;
@@ -281,7 +291,7 @@
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(14, 90);
+            this.button12.Location = new System.Drawing.Point(14, 99);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(25, 23);
             this.button12.TabIndex = 1;
@@ -290,7 +300,7 @@
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(14, 61);
+            this.button13.Location = new System.Drawing.Point(14, 71);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(25, 23);
             this.button13.TabIndex = 2;
@@ -299,7 +309,7 @@
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(14, 32);
+            this.button14.Location = new System.Drawing.Point(14, 42);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(25, 23);
             this.button14.TabIndex = 0;
@@ -309,6 +319,7 @@
             // collabSecLevelDateOfEndDateTimePicker
             // 
             this.collabSecLevelDateOfEndDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.collabSecLevelBindingSource, "CollabSecLevelDateOfEnd", true));
+            this.collabSecLevelDateOfEndDateTimePicker.Enabled = false;
             this.collabSecLevelDateOfEndDateTimePicker.Location = new System.Drawing.Point(349, 253);
             this.collabSecLevelDateOfEndDateTimePicker.Name = "collabSecLevelDateOfEndDateTimePicker";
             this.collabSecLevelDateOfEndDateTimePicker.Size = new System.Drawing.Size(233, 34);
@@ -317,6 +328,7 @@
             // collabSecLevelDateOfStartDateTimePicker
             // 
             this.collabSecLevelDateOfStartDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.collabSecLevelBindingSource, "CollabSecLevelDateOfStart", true));
+            this.collabSecLevelDateOfStartDateTimePicker.Enabled = false;
             this.collabSecLevelDateOfStartDateTimePicker.Location = new System.Drawing.Point(349, 213);
             this.collabSecLevelDateOfStartDateTimePicker.Name = "collabSecLevelDateOfStartDateTimePicker";
             this.collabSecLevelDateOfStartDateTimePicker.Size = new System.Drawing.Size(233, 34);
@@ -336,7 +348,7 @@
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(730, 212);
+            this.groupBox2.Size = new System.Drawing.Size(811, 212);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Security Level for Employees";
@@ -354,43 +366,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(718, 173);
+            this.dataGridView1.Size = new System.Drawing.Size(799, 173);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Surname";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "SecurityLevel";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "DateOfStart";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "DateOfEnd";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
             // 
             // groupBox3
             // 
@@ -401,9 +378,9 @@
             this.groupBox3.Controls.Add(this.securiryLevelTextBox);
             this.groupBox3.Controls.Add(securityLevelIDLabel);
             this.groupBox3.Controls.Add(this.securityLevelIDTextBox);
-            this.groupBox3.Location = new System.Drawing.Point(609, 240);
+            this.groupBox3.Location = new System.Drawing.Point(609, 230);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(605, 228);
+            this.groupBox3.Size = new System.Drawing.Size(605, 238);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Add Security Level";
@@ -486,14 +463,14 @@
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.button4);
-            this.panel3.Location = new System.Drawing.Point(766, 27);
+            this.panel3.Location = new System.Drawing.Point(829, 27);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(451, 67);
+            this.panel3.Size = new System.Drawing.Size(388, 90);
             this.panel3.TabIndex = 10;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(16, 19);
+            this.button2.Location = new System.Drawing.Point(3, 28);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(108, 39);
             this.button2.TabIndex = 1;
@@ -503,7 +480,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(326, 19);
+            this.button5.Location = new System.Drawing.Point(265, 28);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(111, 39);
             this.button5.TabIndex = 4;
@@ -513,7 +490,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(154, 19);
+            this.button4.Location = new System.Drawing.Point(117, 28);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(133, 39);
             this.button4.TabIndex = 3;
@@ -525,15 +502,15 @@
             // 
             this.panel4.Controls.Add(this.button3);
             this.panel4.Controls.Add(this.button1);
-            this.panel4.Location = new System.Drawing.Point(763, 115);
+            this.panel4.Location = new System.Drawing.Point(832, 123);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(451, 109);
+            this.panel4.Size = new System.Drawing.Size(382, 101);
             this.panel4.TabIndex = 13;
             this.panel4.Visible = false;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(28, 39);
+            this.button3.Location = new System.Drawing.Point(58, 28);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(102, 39);
             this.button3.TabIndex = 2;
@@ -543,7 +520,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(329, 39);
+            this.button1.Location = new System.Drawing.Point(224, 28);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 39);
             this.button1.TabIndex = 0;
@@ -584,9 +561,9 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(117, 13);
+            this.button8.Location = new System.Drawing.Point(127, 13);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(133, 39);
+            this.button8.Size = new System.Drawing.Size(115, 39);
             this.button8.TabIndex = 3;
             this.button8.Text = "Edit";
             this.button8.UseVisualStyleBackColor = true;
@@ -654,6 +631,41 @@
             // 
             this.collabSecLevelTableAdapter.ClearBeforeFill = true;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 75;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Surname";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "SecurityLevel";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 200;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "DateOfStart";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 175;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "DateOfEnd";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 170;
+            // 
             // EmployeeSecLevel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -715,11 +727,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private SecurityServiceOfUkraineDataSet securityServiceOfUkraineDataSet;
         private System.Windows.Forms.BindingSource securityLevelBindingSource;
         private SecurityServiceOfUkraineDataSetTableAdapters.SecurityLevelTableAdapter securityLevelTableAdapter;
@@ -747,5 +754,11 @@
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

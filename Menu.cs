@@ -117,5 +117,10 @@ namespace SSU
             employeeSuccess = new EmployeeSuccess();
             employeeSuccess.Show();
         }
+
+        private void systemAdminAccessToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -38,6 +38,7 @@
             System.Windows.Forms.Label securitySecretLabel1;
             System.Windows.Forms.Label securitySecretDescriptionLabel;
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button20 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
@@ -186,6 +187,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button20);
             this.groupBox1.Controls.Add(this.button19);
             this.groupBox1.Controls.Add(this.panel5);
             this.groupBox1.Controls.Add(this.comboBox2);
@@ -206,13 +208,21 @@
             this.groupBox1.Text = "Add Securiry Secret for document";
             this.groupBox1.Visible = false;
             // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(385, 90);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(92, 35);
+            this.button20.TabIndex = 15;
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
             // button19
             // 
-            this.button19.Location = new System.Drawing.Point(422, 33);
+            this.button19.Location = new System.Drawing.Point(385, 134);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(92, 63);
+            this.button19.Size = new System.Drawing.Size(92, 36);
             this.button19.TabIndex = 4;
-            this.button19.Text = "SS";
             this.button19.UseVisualStyleBackColor = true;
             this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
@@ -310,6 +320,7 @@
             // documSecSecretDateOfEndDateTimePicker
             // 
             this.documSecSecretDateOfEndDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.documSecSecretBindingSource, "DocumSecSecretDateOfEnd", true));
+            this.documSecSecretDateOfEndDateTimePicker.Enabled = false;
             this.documSecSecretDateOfEndDateTimePicker.Location = new System.Drawing.Point(373, 238);
             this.documSecSecretDateOfEndDateTimePicker.Name = "documSecSecretDateOfEndDateTimePicker";
             this.documSecSecretDateOfEndDateTimePicker.Size = new System.Drawing.Size(200, 34);
@@ -318,6 +329,7 @@
             // documSecSecretDateOfStartDateTimePicker
             // 
             this.documSecSecretDateOfStartDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.documSecSecretBindingSource, "DocumSecSecretDateOfStart", true));
+            this.documSecSecretDateOfStartDateTimePicker.Enabled = false;
             this.documSecSecretDateOfStartDateTimePicker.Location = new System.Drawing.Point(373, 189);
             this.documSecSecretDateOfStartDateTimePicker.Name = "documSecSecretDateOfStartDateTimePicker";
             this.documSecSecretDateOfStartDateTimePicker.Size = new System.Drawing.Size(200, 34);
@@ -337,7 +349,7 @@
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(786, 230);
+            this.groupBox2.Size = new System.Drawing.Size(875, 230);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Securiry Secrets of Documents";
@@ -355,7 +367,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(769, 180);
+            this.dataGridView1.Size = new System.Drawing.Size(858, 180);
             this.dataGridView1.TabIndex = 0;
             // 
             // Column1
@@ -370,28 +382,28 @@
             this.Column2.HeaderText = "DocumentName";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
+            this.Column2.Width = 175;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "SecurirySecret";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
+            this.Column3.Width = 150;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "DateOfStart";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
+            this.Column4.Width = 200;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "DateOfEnd";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
+            this.Column5.Width = 200;
             // 
             // securitySecretTableAdapter
             // 
@@ -430,14 +442,14 @@
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.button4);
-            this.panel3.Location = new System.Drawing.Point(804, 29);
+            this.panel3.Location = new System.Drawing.Point(890, 31);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(451, 98);
+            this.panel3.Size = new System.Drawing.Size(365, 96);
             this.panel3.TabIndex = 9;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(28, 32);
+            this.button2.Location = new System.Drawing.Point(3, 32);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(108, 39);
             this.button2.TabIndex = 1;
@@ -447,7 +459,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(324, 32);
+            this.button5.Location = new System.Drawing.Point(254, 32);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(111, 39);
             this.button5.TabIndex = 4;
@@ -457,7 +469,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(165, 32);
+            this.button4.Location = new System.Drawing.Point(117, 32);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(133, 39);
             this.button4.TabIndex = 3;
@@ -469,15 +481,15 @@
             // 
             this.panel4.Controls.Add(this.button3);
             this.panel4.Controls.Add(this.button1);
-            this.panel4.Location = new System.Drawing.Point(804, 133);
+            this.panel4.Location = new System.Drawing.Point(893, 144);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(451, 109);
+            this.panel4.Size = new System.Drawing.Size(362, 98);
             this.panel4.TabIndex = 12;
             this.panel4.Visible = false;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(28, 39);
+            this.button3.Location = new System.Drawing.Point(40, 24);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(102, 39);
             this.button3.TabIndex = 2;
@@ -487,7 +499,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(329, 39);
+            this.button1.Location = new System.Drawing.Point(184, 24);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 39);
             this.button1.TabIndex = 0;
@@ -718,11 +730,6 @@
         private System.Windows.Forms.DateTimePicker documSecSecretDateOfEndDateTimePicker;
         private System.Windows.Forms.DateTimePicker documSecSecretDateOfStartDateTimePicker;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private SecurityServiceOfUkraineDataSetTableAdapters.DocumentTableAdapter documentTableAdapter;
         private System.Windows.Forms.BindingSource documentBindingSource;
         private System.Windows.Forms.ComboBox comboBox2;
@@ -749,5 +756,11 @@
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

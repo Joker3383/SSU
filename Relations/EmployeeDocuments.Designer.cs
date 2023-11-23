@@ -155,7 +155,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(295, 11);
+            this.button5.Location = new System.Drawing.Point(304, 11);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(118, 39);
             this.button5.TabIndex = 4;
@@ -165,7 +165,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(156, 11);
+            this.button4.Location = new System.Drawing.Point(161, 11);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(116, 39);
             this.button4.TabIndex = 3;
@@ -258,6 +258,7 @@
             // collabDocumDateOfStartDateTimePicker
             // 
             this.collabDocumDateOfStartDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.collabDocumBindingSource, "CollabDocumDateOfStart", true));
+            this.collabDocumDateOfStartDateTimePicker.Enabled = false;
             this.collabDocumDateOfStartDateTimePicker.Location = new System.Drawing.Point(891, 87);
             this.collabDocumDateOfStartDateTimePicker.Name = "collabDocumDateOfStartDateTimePicker";
             this.collabDocumDateOfStartDateTimePicker.Size = new System.Drawing.Size(194, 34);
@@ -266,6 +267,7 @@
             // collabDocumDateOfEndDateTimePicker
             // 
             this.collabDocumDateOfEndDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.collabDocumBindingSource, "CollabDocumDateOfEnd", true));
+            this.collabDocumDateOfEndDateTimePicker.Enabled = false;
             this.collabDocumDateOfEndDateTimePicker.Location = new System.Drawing.Point(885, 156);
             this.collabDocumDateOfEndDateTimePicker.Name = "collabDocumDateOfEndDateTimePicker";
             this.collabDocumDateOfEndDateTimePicker.Size = new System.Drawing.Size(200, 34);
@@ -399,7 +401,7 @@
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
-            this.ID.Width = 125;
+            this.ID.Width = 150;
             // 
             // CollaboratorName
             // 
@@ -407,7 +409,7 @@
             this.CollaboratorName.MinimumWidth = 6;
             this.CollaboratorName.Name = "CollaboratorName";
             this.CollaboratorName.ReadOnly = true;
-            this.CollaboratorName.Width = 175;
+            this.CollaboratorName.Width = 250;
             // 
             // DocumentName
             // 
@@ -415,7 +417,7 @@
             this.DocumentName.MinimumWidth = 6;
             this.DocumentName.Name = "DocumentName";
             this.DocumentName.ReadOnly = true;
-            this.DocumentName.Width = 175;
+            this.DocumentName.Width = 200;
             // 
             // Column1
             // 
@@ -423,7 +425,7 @@
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 125;
+            this.Column1.Width = 200;
             // 
             // Column2
             // 
@@ -431,7 +433,7 @@
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 125;
+            this.Column2.Width = 200;
             // 
             // collaboratorsTableAdapter
             // 
@@ -516,9 +518,6 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CollaboratorName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DocumentName;
         private SecurityServiceOfUkraineDataSet securityServiceOfUkraineDataSet;
         private System.Windows.Forms.BindingSource collaboratorsBindingSource;
         private SecurityServiceOfUkraineDataSetTableAdapters.CollaboratorsTableAdapter collaboratorsTableAdapter;
@@ -535,6 +534,9 @@
         private System.Windows.Forms.DateTimePicker collabDocumDateOfEndDateTimePicker;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource collaboratorsBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CollaboratorName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DocumentName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }

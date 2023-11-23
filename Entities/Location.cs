@@ -31,7 +31,7 @@ namespace SSU
 
         private void Form3_Load(object sender, EventArgs e)
         {
-
+            SelectLocations();
             this.locationTableAdapter.Fill(this.securityServiceOfUkraineDataSet.Location);
 
         }
@@ -152,6 +152,11 @@ namespace SSU
         }
 
         private void adressTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

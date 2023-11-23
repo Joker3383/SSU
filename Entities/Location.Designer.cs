@@ -52,11 +52,11 @@
             this.locationIDTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LocationType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.locationTableAdapter = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.LocationTableAdapter();
             this.tableAdapterManager = new SSU.SecurityServiceOfUkraineDataSetTableAdapters.TableAdapterManager();
-            this.locationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.locationTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             locationIDLabel = new System.Windows.Forms.Label();
             adressLabel = new System.Windows.Forms.Label();
             locationTypeLabel = new System.Windows.Forms.Label();
@@ -106,6 +106,7 @@
             this.panel1.Size = new System.Drawing.Size(304, 76);
             this.panel1.TabIndex = 0;
             this.panel1.Visible = false;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button3
             // 
@@ -281,13 +282,11 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.locationIDDataGridViewTextBoxColumn,
-            this.adressDataGridViewTextBoxColumn,
-            this.locationTypeDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.locationBindingSource;
+            this.ID,
+            this.Adress,
+            this.LocationType});
             this.dataGridView1.Location = new System.Drawing.Point(12, 33);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -296,6 +295,30 @@
             this.dataGridView1.Size = new System.Drawing.Size(937, 217);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 125;
+            // 
+            // Adress
+            // 
+            this.Adress.HeaderText = "Adress";
+            this.Adress.MinimumWidth = 6;
+            this.Adress.Name = "Adress";
+            this.Adress.ReadOnly = true;
+            this.Adress.Width = 150;
+            // 
+            // LocationType
+            // 
+            this.LocationType.HeaderText = "LocationType";
+            this.LocationType.MinimumWidth = 6;
+            this.LocationType.Name = "LocationType";
+            this.LocationType.ReadOnly = true;
+            this.LocationType.Width = 200;
             // 
             // locationTableAdapter
             // 
@@ -320,33 +343,6 @@
             this.tableAdapterManager.SecurityLevelTableAdapter = null;
             this.tableAdapterManager.SecuritySecretTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = SSU.SecurityServiceOfUkraineDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // locationIDDataGridViewTextBoxColumn
-            // 
-            this.locationIDDataGridViewTextBoxColumn.DataPropertyName = "LocationID";
-            this.locationIDDataGridViewTextBoxColumn.HeaderText = "LocationID";
-            this.locationIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.locationIDDataGridViewTextBoxColumn.Name = "locationIDDataGridViewTextBoxColumn";
-            this.locationIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.locationIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // adressDataGridViewTextBoxColumn
-            // 
-            this.adressDataGridViewTextBoxColumn.DataPropertyName = "Adress";
-            this.adressDataGridViewTextBoxColumn.HeaderText = "Adress";
-            this.adressDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.adressDataGridViewTextBoxColumn.Name = "adressDataGridViewTextBoxColumn";
-            this.adressDataGridViewTextBoxColumn.ReadOnly = true;
-            this.adressDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // locationTypeDataGridViewTextBoxColumn
-            // 
-            this.locationTypeDataGridViewTextBoxColumn.DataPropertyName = "LocationType";
-            this.locationTypeDataGridViewTextBoxColumn.HeaderText = "LocationType";
-            this.locationTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.locationTypeDataGridViewTextBoxColumn.Name = "locationTypeDataGridViewTextBoxColumn";
-            this.locationTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.locationTypeDataGridViewTextBoxColumn.Width = 125;
             // 
             // Location
             // 
@@ -404,8 +400,8 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn locationIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn locationTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Adress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LocationType;
     }
 }

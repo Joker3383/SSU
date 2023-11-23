@@ -21,6 +21,7 @@ namespace SSU
         }
         private void Documents_Load(object sender, EventArgs e)
         {
+            SelectDocuments();
             // TODO: This line of code loads data into the 'securityServiceOfUkraineDataSet.Document' table. You can move, or remove it, as needed.
             this.documentTableAdapter.Fill(this.securityServiceOfUkraineDataSet.Document);
 
@@ -36,7 +37,7 @@ namespace SSU
         }
 
         //get
-        private void Selectoperations()
+        private void SelectDocuments()
         {
             int i = 0;
             string sqlExpression = "SELECT * FROM Document ";
@@ -99,7 +100,7 @@ namespace SSU
             if (flag == 3) documentBindingSource.RemoveCurrent();
 
             documentBindingNavigatorSaveItem_Click(sender, e);
-            Selectoperations();
+            SelectDocuments();
             panel3.Visible = true;
             panel4.Visible = false;
             groupBox1.Visible = false;
